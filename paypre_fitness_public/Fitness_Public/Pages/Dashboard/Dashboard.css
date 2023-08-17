@@ -1,0 +1,383 @@
+﻿/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* Manrope */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Capture It */
+@font-face {
+    font-family: 'capture_it';
+    src: url('../../Fonts/Capture It/Capture_it.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    position: relative;
+    font-family: 'Manrope', sans-serif;
+}
+
+.pageHeader {
+    margin-left: 3rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-block: 0.4rem;
+}
+
+
+/*fitness logo*/
+nav
+.navbar-nav
+.nav-item
+.branchName {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000 !important;
+    text-shadow: 3px 4px 7px rgb(153 150 142 / 80%);
+}
+
+.brand-logo {
+    width: 6.4rem;
+    height: 6.4rem;
+    background-position: center;
+    background-image: url('../../Images/Master/logoFitness.svg');
+    background-repeat: no-repeat;
+    transform: scale(1.3);
+}
+
+.navbar-brand.ud-navbar-brand
+img.fitnessLogo {
+    height: 100%;
+    width: 100%;
+}
+/*fitness logo*/
+
+/*fitness description*/
+.brand-DesContainer .description_1 {
+    font-family: 'capture_it', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.brand-DesContainer .description_2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #3E3E3E;
+}
+/*DashboardChart-Container*/
+.DashboardChart-Container {
+    padding: 3.2rem;
+    background-color: #E8ECF1;
+}
+
+/*Header*/
+.Heading-Container {
+}
+
+    .Heading-Container
+    .hdr_common {
+        display: block;
+        line-height: 0.8rem;
+    }
+
+    .Heading-Container
+    .hdr_1 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #000000;
+    }
+
+        .Heading-Container
+        .hdr_1
+        .ImgWave {
+            height: 2.4rem;
+            width: auto;
+        }
+
+    .Heading-Container
+    .hdr_2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #5C5C5C;
+    }
+
+    .Heading-Container
+    .Date-Container {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+        .Heading-Container
+        .Date-Container
+        .txtFromAndToDate {
+            /*border:none;*/
+        }
+
+        .Heading-Container
+        .Date-Container
+        .hdnFromdateTodate_cmn {
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+.txtFromAndToDate {
+    font-size: 1.4rem;
+    width: fit-content;
+    font-weight: 700;
+}
+/*Header Date*/
+.Date-Container {
+    display: flex;
+}
+
+    .Date-Container
+    .hdnFromdateTodate_cmn {
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+/*button*/
+.divBtnSearch {
+    display: flex;
+    align-items: flex-end;
+}
+
+.btnSearch {
+    font-size: 1.4rem;
+}
+/*Charts*/
+/*Calories Chart*/
+.Chart-Container {
+    margin-top: 2rem;
+}
+
+    .Chart-Container
+    .CmnChart_Container {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        border-radius: 0.4rem;
+        position: relative;
+    }
+
+    .Chart-Container
+    .CmnCharts {
+        border-radius: 0.8rem;
+        overflow: hidden;
+    }
+
+
+/*Hearbeat-Container*/
+.Hearbeat-Container,
+.WaterConsumption-Container {
+    display: flex;
+    padding: 1.2rem;
+    background-color: #fff;
+    gap: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    line-height: 1.2;
+    padding: 2.4rem;
+    position: relative;
+}
+
+    .Hearbeat-Container
+    .ImgHeart-Container {
+    }
+
+        .Hearbeat-Container
+        .ImgHeart-Container
+        .ImgHeart,
+        .WaterConsumption-Container
+        .ImgHeart-Container
+        .ImgWater {
+            height: 4.4rem;
+        }
+
+    .Hearbeat-Container
+    .Heartbeat-Description
+    .DescCmn,
+    .WaterConsumption-Container
+    .Water-Description
+    .DescCmn {
+        display: block;
+        z-index: 2;
+    }
+
+        .Hearbeat-Container
+        .Heartbeat-Description
+        .DescCmn.Desc_1,
+        .WaterConsumption-Container
+        .Water-Description
+        .DescCmn.Desc_1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+        .Hearbeat-Container
+        .Heartbeat-Description
+        .DescCmn.Desc_2,
+        .WaterConsumption-Container
+        .Water-Description
+        .DescCmn.Desc_2 {
+            color: #979797;
+            text-transform: capitalize;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+    .Hearbeat-Container
+    .HeartRate-Container,
+    .WaterConsumption-Container
+    .Water-Container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 50%;
+    }
+
+        .Hearbeat-Container
+        .HeartRate-Container
+        .ImghHeartRate,
+        .WaterConsumption-Container
+        .Water-Container
+        .ImgWaterConsumptions {
+            height: 100%;
+        }
+/*Youtube video*/
+.youtubeVideo {
+    border-radius: 1rem;
+    overflow: hidden;
+    min-height: 20rem;
+}
+
+/*loader*/
+.overlay_loader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    height:100%;
+    background-color: #fff;
+    z-index: 3;
+}
+    .overlay_loader
+    .loaderGif {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 4;
+        width:100%;
+        height:100%;
+        background-image: url('../../gifs/Dashboard/spin.gif');
+        transform:translate(-50%,-50%);
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+/* 1800 */
+@media only screen and (min-width: 112.5em) {
+    .classes-card {
+        width: 100%;
+    }
+}
+/* 1200 */
+@media only screen and (max-width: 75em) {
+    .classes-card {
+        width: 100%;
+    }
+}
+/* 900 */
+@media only screen and (max-width: 56.25em) {
+    .classes-card {
+        width: 100%;
+    }
+
+    .ClassesCol-Container {
+        margin-inline: auto;
+    }
+}
+/* 600 */
+@media only screen and (max-width: 37.5em) {
+    .navbar-nav
+    .nav-item {
+        margin-bottom: 1.2rem;
+    }
+
+    .classes-card {
+        width: 100%;
+    }
+
+    .ClassesCol-Container {
+        margin-inline: auto;
+    }
+
+    .Hearbeat-Container .Heartbeat-Description .DescCmn.Desc_1, .WaterConsumption-Container .Water-Description .DescCmn.Desc_1 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .Hearbeat-Container .HeartRate-Container .ImghHeartRate,
+    .WaterConsumption-Container .Water-Container .ImgWaterConsumptions {
+        display: none;
+    }
+    /*loader*/
+        .overlay_loader
+        .loaderGif {
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            z-index: 4;
+            background-image: url('../../gifs/Dashboard/spin.gif');
+        }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+    .Header-Conatiner {
+        margin-top: 10rem;
+    }
+    
+}
+@media only screen and (min-width:374px) and (max-width:425px) {
+    .Header-Conatiner {
+        margin-top: 10rem;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:768px) {
+    .Header-Conatiner {
+        margin-top: 10rem;
+    }
+}
+/*
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+    SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+    FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+ */

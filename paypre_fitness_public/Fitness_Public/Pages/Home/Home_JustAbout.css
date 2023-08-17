@@ -1,0 +1,274 @@
+﻿:root {
+    --JustAboutBg: #F0F0F0;
+    --JustAboutBg_BS: #fff;
+    --JustAbout_Desc_1: #030303;
+    --JustAbout_Desc_2: #030303;
+}
+
+.JustAbout {
+    width: auto;
+    background-color: var(--JustAboutBg);
+    padding-inline: 0;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    margin-block: 6.4rem;
+}
+
+.JustAboutLeft-Container {
+    padding: 0 4.8rem;
+}
+
+.JustAbout-Heading {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    color: #535353;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.JustAbout
+.JustAboutBg {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    .JustAbout
+    .JustAboutBg
+    .JustAboutBg-BS {
+        display: none;
+    }
+
+.JustAbout-Left {
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .JustAbout-Left
+    .Desc_1 {
+        font-weight: 500;
+        color: var(--JustAbout_Desc_2);
+    }
+
+    .JustAbout-Left
+    .Desc_2 {
+        font-weight: 800;
+        font-style: italic;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        color: var(--JustAbout_Desc_2);
+    }
+
+.Decs_2_Position {
+    position: relative;
+}
+
+.JustAbout-Crown {
+    position: absolute;
+    width: 4rem;
+    height: auto;
+    bottom: 70%;
+    left: 50%;
+}
+
+.JustAbout-Left
+.Desc_3 {
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.btnExplore {
+    border: 0.5px solid #212529a6;
+    border-radius: 10rem;
+    text-transform: capitalize;
+}
+
+.ExploreArrow {
+    background-size: contain;
+    height: 15%;
+    width: 15%;
+}
+
+@media (max-width: 320px),(max-width:375px),(max-width:425px),(max-width:576px) {
+    .JustAboutLeft-Container {
+        padding: 0 0 0 4.8rem;
+    }
+
+    .JustAbout {
+        min-height: auto;
+        padding-block: 6.4rem;
+        margin-block: unset;
+    }
+
+        .JustAbout
+        .JustAboutBg {
+            background-image: url(../../Images/JustAbout/MobileJustAbout.png);
+            background-size: contain;
+        }
+
+    .JustAbout-Left .Desc_1 {
+        font-size: 1.4rem;
+    }
+
+    .JustAbout-Left
+    .Desc_2 {
+        font-size: 1.4rem;
+    }
+
+    .JustAbout-Left
+    .Desc_3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width:577px) and (max-width:768px) {
+    .JustAbout {
+        min-height: auto;
+        padding-block: 6.4rem;
+        margin-block: unset;
+    }
+
+        .JustAbout
+        .JustAboutBg {
+            background-image: url(../../Images/JustAbout/MobileJustAbout.png);
+            background-size: contain;
+        }
+
+    .JustAbout-Left
+    .Desc_1 {
+        font-size: 1.6rem;
+    }
+
+    .JustAbout-Left
+    .Desc_2 {
+        font-size: 1.6rem;
+    }
+
+    .JustAbout-Left
+    .Desc_3 {
+        font-size: 1.2rem;
+    }
+
+    .btnExplore {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width:769px) and (max-width:992px) {
+    .JustAbout {
+        background-color: var(--JustAboutBg_BS);
+        min-height: auto;
+    }
+
+        .JustAbout
+        .JustAboutBg
+        .JustAboutBg-BS {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+    .JustAbout-Left
+    .Desc_1 {
+        font-size: 1.8rem;
+    }
+
+    .JustAbout-Left
+    .Desc_2 {
+        font-size: 1.8rem;
+    }
+
+    .JustAbout-Left
+    .Desc_3 {
+        font-size: 1.2rem;
+    }
+
+    .btnExplore {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width:993px) and (max-width:1024px) {
+    .JustAbout {
+        background-color: var(--JustAboutBg_BS);
+        min-height: auto;
+    }
+
+        .JustAbout
+        .JustAboutBg
+        .JustAboutBg-BS {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+    .JustAbout-Left
+    .Desc_1 {
+        font-size: 2rem;
+    }
+
+    .JustAbout-Left
+    .Desc_2 {
+        font-size: 2rem;
+    }
+
+    .JustAbout-Left
+    .Desc_3 {
+        font-size: 1.4rem;
+    }
+
+    .btnExplore {
+        font-size: 1.4rem;
+        padding-inline: 3rem;
+    }
+}
+
+@media (min-width:1025px) and (max-width:1440px),(min-width:1441px) {
+    .JustAbout {
+        background-color: var(--JustAboutBg_BS);
+        min-height: auto;
+    }
+
+        .JustAbout
+        .JustAboutBg
+        .JustAboutBg-BS {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+
+    .JustAbout-Left
+    .Desc_1 {
+        font-size: 2.4rem;
+    }
+
+    .JustAbout-Left
+    .Desc_2 {
+        font-size: 2.4rem;
+    }
+
+    .JustAbout-Left
+    .Desc_3 {
+        font-size: 1.8rem;
+    }
+
+    .btnExplore {
+        font-size: 1.8rem;
+        padding-inline: 3rem;
+    }
+}
+/*
+font-family: 'Manrope', sans-serif;
+font-family: 'Montserrat', sans-serif;
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/

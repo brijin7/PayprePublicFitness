@@ -1,0 +1,160 @@
+﻿.PlanContainer {
+    height: 100vh;
+    width: 98vw;
+    border-radius: 0px;
+}
+
+.planname {
+    border-radius: 0px;
+    font-family: "Manrope";
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 0em;
+    display: flex;
+    margin-left: 2rem;
+}
+
+.planedescription {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.divCategoryBenefits {
+    width: 100%;
+}
+
+.DivCat {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-top: 5rem;
+}
+
+.DivCatDetails{
+    position:relative;
+}
+.divSub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.lblMonth {
+    font-size: 5rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.lblMonthSub {
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.lblPack {
+    display:block;
+    font-size: 1.2rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #5F5F5F;
+}
+
+
+.lblPlanName {
+    display: block;
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 2rem;
+    color: #171717;
+}
+
+
+.dtlCatBenefit {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-left: 1.5rem;
+    display: list-item;
+    margin-bottom: 1rem;
+}
+
+.dtlCatBenefitHead {
+    font-family: 'Manrope';
+    color: #353535;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.lblJoingDateText {
+    display: flex;
+    justify-content: end;
+    font-size: 1.3rem;
+    font-family: 'Manrope';
+    font-weight: 600;
+}
+.lblJoingDate {
+    display: flex;
+    justify-content: end;
+    font-size: 2.5rem;
+    font-family: 'Manrope';
+    font-weight: 600;
+}
+.lblTotalAmt {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+.dtlBenefitImg {
+    width: 7rem;
+}
+.divSummary {
+    padding: 2rem;
+    padding-top: 3rem;
+    background-color: #F0F0F0;
+    border-radius: 1rem;
+    margin-left: 3rem;
+    position: relative;
+}
+.lblSummaryHead {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Manrope';
+}
+
+.lblSummaryAmt {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Manrope';
+    color: #262626;
+}
+
+.divSummaryAmt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.DivSummaryFinalAmt {
+    padding: 1rem;
+}
+
+.lblFinalTotalAmt {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Manrope';
+}
+.DivbtnBuy {
+    display: flex;
+    justify-content: center;
+}
+
+.btnBuyNow {
+    padding: 0.5rem;
+    width: 50%;
+    color: white;
+    background-color: black;
+    border-radius: 2rem;
+}

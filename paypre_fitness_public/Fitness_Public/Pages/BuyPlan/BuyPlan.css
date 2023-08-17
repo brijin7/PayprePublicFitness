@@ -1,0 +1,274 @@
+﻿
+.CategoryImgBg {
+    position: absolute;
+    width: 100%;
+    top: 8%;
+    z-index: -1;
+}
+
+.CategoryImg {
+    position: relative;
+    top: -7%;
+    left: 20%;
+    height: 65%;
+}
+
+.CategoryNameBg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #D6D6D6;
+    font-size: 7rem;
+    white-space: nowrap;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+}
+
+.divCategoryListContainer {
+    position: absolute;
+    text-align: -webkit-center;
+    margin-top: 21%;
+}
+
+.divCategoryList {
+    text-align: center;
+    padding: 6rem;
+    background-color: rgba(140, 242, 102, 0.9);
+    border-radius: 1.2rem;
+    position: relative;
+    width: 26rem;
+    height: 20rem;
+    margin: 10px;
+}
+
+.divCategoryListFat {
+    text-align: center;
+    padding: 6rem;
+    background: #EDD091E5;
+    border-radius: 1.2rem;
+    position: relative;
+    width: 26rem;
+    height: 20rem;
+    margin: 10px;
+}
+
+.lbldtlPlanName {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 2rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    word-wrap: break-word;
+    max-width: 8rem;
+}
+
+.lbldtlAmt {
+    position: absolute;
+    top: 15%;
+    font-size: 2.3rem;
+    left: 50%;
+    font-weight: 600;
+    font-family: 'Montserrat';
+}
+
+.divdtltrainingName {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.lbldtlTraningName {
+    background-color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    border-radius: 0.6rem;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.dtlbtnBuy {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: black;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 2rem;
+}
+
+
+
+.dtlCatCard {
+    background-color: #ffffff;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    padding: 2rem;
+    z-index: 1;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+
+
+.divresponsive {
+    overflow-y: auto;
+    max-height: 525px;
+    margin-bottom: 2em;
+}
+
+.DivdtlCategory {
+    position: relative;
+    width: 40rem;
+    background-color: #E8E8E8;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.dtlClosebtn {
+    position: absolute;
+    right: 10%;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.lblSubDtlHead {
+    position: absolute;
+    left: 10%;
+    font-size: 2rem;
+    font-family: 'Manrope';
+    font-weight: 800;
+}
+
+.lblSubDtlHeadSub {
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: 1rem;
+    position: absolute;
+    left: 10%;
+}
+
+.lblCName {
+    font-family: 'Manrope';
+    font-weight: 700;
+}
+
+.lblCAmt {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: black;
+    font-family: 'Manrope';
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.downArrow {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 5;
+    cursor: pointer;
+    width: 4rem;
+    transform: rotateX(180deg);
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.PlanContainer {
+    height: 100vh;
+    width: 98vw;
+    border-radius: 0px;
+}
+
+.planname {
+    border-radius: 0px;
+    font-family: "Manrope";
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 0em;
+    display: flex;
+    margin-left: 2rem;
+}
+
+.planimage {
+    height: 70vh;
+    background: url(../../Images/BuyPlan/Musclebuilding.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.planfooter {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+footer a {
+    display: block;
+    margin: 5px 0;
+    text-decoration-line: none;
+    color: black;
+}
+
+.Lastfooter {
+    display: inline-block
+}
+
+.footertop {
+    width: 16rem;
+    height: 5rem;
+    background: white;
+    border-radius: 30.123px;
+    color: black;
+    font-size: 12px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    float: right;
+}
+/*//////////*/
+
+@media (min-width: 319px) and (max-width: 375px) {
+    .CategoryNameBg {
+        font-size: 3rem;
+    }
+
+    .CategoryImg {
+        top: -5%;
+        left: 12%;
+        height: 22%;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 600px) {
+    .CategoryNameBg {
+        font-size: 4rem;
+    }
+
+    .CategoryImg {
+        top: -5%;
+        left: 14%;
+        height: 25%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .CategoryImg {
+        top: -7%;
+        left: 12%;
+        height: 45%;
+    }
+}

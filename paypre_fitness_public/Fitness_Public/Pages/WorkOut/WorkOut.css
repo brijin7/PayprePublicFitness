@@ -1,0 +1,233 @@
+﻿
+html {
+    background: #f1f1f1;
+}
+.containerBg {
+    background: #f1f1f1;
+}
+
+.divWorkOutHead {
+    text-align: center;
+    padding: 1rem;
+    background-color: white;
+}
+.lblWorkOutHead {
+    font-size: 2rem;
+    font-family: 'Manrope';
+    font-weight: 700;
+    color: black;
+}
+.divWorkOut {
+    margin: 5rem;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+.imgworkout {
+    margin-top: 1rem;
+    width: 35rem;
+    border-radius: 0.5rem;
+}
+.workoutlist {
+    margin: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 12px rgba(0,66,129,.12);
+    position: relative;
+    width: 37rem;
+    margin-left: 1.8rem;
+}
+.divWorkOutDtl {
+    text-align: center;
+    margin-top: 3rem;
+}
+.lblWortOutDtl {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    font-family: 'Manrope';
+    margin-top: 2rem;
+}
+
+.lblWorkOutName {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.divWorkOutNav {
+    text-align: center;
+    background-color: white;
+    margin: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2rem;
+}
+
+.lblWorkOutNavHead {
+    font-size: 2rem;
+    color: black;
+    font-weight: 500;
+}
+
+.divWorkOutTypeNav {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    background: white;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.lblWorkOutTypeHead {
+    font-size: 1.5rem;
+    font-family: 'Manrope';
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.lblWorkOutTypeHeadSelect {
+    border-bottom: 2px solid #165c18;
+}
+
+    .lblWorkOutTypeHead:hover {
+        color: black;
+    }
+
+
+
+.VideoWork {
+    width: 40rem;
+    border-radius: 0.5rem;
+    height: 20rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+
+.NewClass {
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+
+.DivNewClass {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+    width: 98%;
+    position: relative;
+}
+
+.DivClass {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+    width: 36rem;
+    position: relative;
+}
+
+.DivWorkoutVid {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+    width: 89rem;
+    position: relative;
+}
+
+.DivActivity {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+    width: 25rem;
+    position: relative;
+}
+
+.weekly-header {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(144,150,159,.2);
+    align-items: center;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000;
+    cursor: pointer;
+}
+
+.icon-sec {
+    padding-top: 7px;
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.25);
+    position: relative;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+}
+
+.itemsName {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+
+.item-subname {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #9c9eb9;
+    margin-bottom: 0;
+}
+
+.lblSets {
+    float: left;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+.lblReps {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+}
+.chkWorkoutDone {
+    float: right;
+}
+.divSetps {
+    margin:2rem;
+}
+
+.lblWorkoutType {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.lblRepsHead {
+    font-size: 1rem;
+    font-weight: 800;
+    color: black;
+    margin-left: 3.5rem;
+    margin-right: -1.5rem;
+}
+
+.divCategoryList {
+    margin-left: 2rem;
+}

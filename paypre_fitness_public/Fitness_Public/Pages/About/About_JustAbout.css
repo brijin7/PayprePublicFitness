@@ -1,0 +1,86 @@
+﻿:root {
+    --JustAboutBg: #F0F0F0;
+    --JustAbout_Desc_1: #030303;
+    --JustAbout_Desc_2: #030303;
+}
+
+
+
+@media (min-width:320px) {
+    .JustAbout {
+        min-height: auto;
+        width: auto;
+        background-color: var(--JustAboutBg);
+    }
+
+        .JustAbout
+        .JustAboutBg {
+            background-image: url(../../Images/JustAbout/MobileJustAbout.svg);
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+    .JustAbout-Left {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+        .JustAbout-Left
+        .Desc_1 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--JustAbout_Desc_2);
+        }
+
+        .JustAbout-Left
+        .Desc_2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            font-style: italic;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+            color: var(--JustAbout_Desc_2);
+        }
+
+    .Decs_2_Position {
+        position: relative;
+    }
+
+    .JustAbout-Crown {
+        position: absolute;
+        width: 3rem;
+        height: auto;
+        bottom: 70%;
+        left: 50%;
+    }
+
+    .JustAbout-Left
+    .Desc_3 {
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-block:0.8rem;
+    }
+    .btnExplore {
+        border: 0.5px solid #212529a6;
+        border-radius: 10rem;
+        text-transform:capitalize;  
+    }
+    .ExploreArrow {
+        background-size: contain;
+        height: 15%;
+        width: 15%;
+
+    }
+}
+/*
+font-family: 'Manrope', sans-serif;
+font-family: 'Montserrat', sans-serif;
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/

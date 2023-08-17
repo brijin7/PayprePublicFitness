@@ -1,0 +1,1587 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Fitness.master.cs" Inherits="Fitness" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+
+    <title>Fitness public</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <%-- View Port Meta data --%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-- bootstrap 5.0.2 css--%>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <%-- Master Page Css --%>
+    <link href="CustomStyles/Master.css" rel="stylesheet" />
+    <%-- Owl Carousel --%>
+    <link href="Content/OwlCarousel/owl.carousel.min.css" rel="stylesheet" />
+    <%--Date Picker--%>
+    <link href="Pages/MyProfile/DatePicker.css" rel="stylesheet" />
+    <%-- jQuery 3.6.0  --%>
+    <script defer src='<%=ResolveUrl("~/Scripts/jquery-3.6.0.min.js") %>'></script>
+    <%-- popper.js 1.16.0 --%>
+    <script defer src='<%=ResolveUrl("~/Scripts/umd/popper.min.js") %>'></script>
+    <%--  bootstrap 5.0.2 --%>
+    <script defer src='<%=ResolveUrl("~/Scripts/bootstrap.min.js") %>'></script>
+    <%-- OwlCarousel --%>
+    <script defer src='<%=ResolveUrl("~/Scripts/OwlCarousel/owl.carousel.min.js") %>'></script>
+    <%-- fa fa icon --%>
+    <script src="https://kit.fontawesome.com/6aac34c85b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <%-- Notification --%>
+      <script defer src='<%=ResolveUrl("Pages/Master/Notification.js")%>'></script>
+
+    <script lang="javascript" type="text/javascript">
+        function successalert(sMsg) {
+            swal({
+                title: 'Fitness',
+                text: sMsg,
+                icon: "success"
+            });
+        }
+        function infoalert(sMsg) {
+            swal({
+                title: 'Fitness',
+                text: sMsg,
+                icon: "info"
+            });
+        }
+        function erroralert(sMsg) {
+            swal({
+                title: 'Fitness',
+                text: sMsg,
+                icon: "error"
+            });
+        }
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+        function SendOtp() {
+            let seconds = 31;
+            let button = document.querySelector('#<%=btnResend.ClientID%>');
+            let buttonConfrm = document.getElementById('<%=btnCfmOtp.ClientID %>');
+            //document.getElementById('txtMobileNo').value = hfMobileNo.Value;
+            function incrementSeconds() {
+
+                seconds = seconds - 1;
+                if (seconds < 10) {
+                    button.value = '00:0' + seconds;
+                    button.disabled = true;
+                }
+                else {
+                    button.value = '00:' + seconds;
+                    button.disabled = true;
+                }
+                if (seconds == 0) {
+                    seconds = 31;
+                    //buttonConfrm.style.display = 'none';
+                    document.getElementById('<%=hfOtp.ClientID %>').value = "";
+                    button.value = "ReSend OTP";
+                    clearInterval(cancel);
+                    button.disabled = false;
+                }
+            }
+            var cancel = setInterval(incrementSeconds, 1000);
+        }
+    </script>
+    <%--    <script type="text/javascript" language="javascript">
+        if (window.location.protocol !== 'https:') {
+            window.location = 'https://' + window.location.hostname + window.location.pathname + window.location.hash;
+        }
+    </script>--%>
+</head>
+<body>
+    <form id="FrmFitness" runat="server">
+        <nav class="navbar ud-navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="divBrand">
+                    <div class="col-12">
+                        <div class="ud-brand row">
+                            <div class="col-12">
+                                <div class="brandAndLogo">
+                                    <a id="btnHomeFromDashBoard" class="brand-logo" runat="server" href="javascript:void(0)"></a>
+                                    <asp:LinkButton ID="btnHome" class="brand-logo" runat="server" PostBackUrl="~/Home.aspx"></asp:LinkButton>&nbsp&nbsp&nbsp
+                                    <div class="brand-DesContainer row">
+                                        <div class="col-12 description_1">
+                                            <asp:Label ID="lblGymName" runat="server"></asp:Label>
+                                        </div>
+                                        <%--<div class="col-12 description_2">fitness | faith | fulfilment</div>--%>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav navlist-container">
+                        <li class="nav-item">
+                            <asp:Label
+                                ID="Master_lblBranch"
+                                class="nav-link d-none"
+                                ClientIDMode="Static"
+                                runat="server"></asp:Label>
+                        </li>
+                        <li id="lstDashboard_Master" class="nav-item" runat="server" visible="false">
+                            <a id="lnkRedirectToDashboard" class="nav-link" href="~/Pages/Dashboard/Dashboard.aspx" runat="server">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="lnkbtnClasses" runat="server" class="nav-link" href="Home.aspx#scrollClasses">classes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="lnkbtnSubscription" runat="server" class="nav-link" href="Home.aspx#scrollSubscription">subscription</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="lnkbtnTestimonials" runat="server" class="nav-link" href="Home.aspx#scrollTestimonials">testimonials</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center mb-4">
+                            <asp:DropDownList
+                                ID="ddlBranch_Master_Nav"
+                                ClientIDMode="Static"
+                                CssClass="ddlBranch"
+                                runat="server">
+                            </asp:DropDownList>
+                        </li>
+
+                        <li class="nav-item">
+                            <a id="btnUserProfile" runat="server" visible="false">
+                                <asp:Image ID="userimg" runat="server" CssClass="UserProfile" scr="Images/Login/UserProfile.png" />
+                            </a>
+                        </li>
+                        <li id="listMyprofile" runat="server" visible="false">
+                            <asp:LinkButton ID="lnkMyProfile" CssClass="lblProfileUserName" runat="server" OnClick="lnkMyProfile_Click">
+                                <asp:Label ID="lblUserName" runat="server"></asp:Label>
+                                <img runat="server" class="imgProDownarrow" src="~/Images/Login/ProfileDownArrow.png" />
+                            </asp:LinkButton>
+                        </li>
+                        <li id="Li3" class="nav-item mb-3" runat="server">
+                            <a id="btnMyPage" class="nav-link btnGetApp" runat="server" visible="false"
+                                href="~/Pages/User/MyPage.aspx">My Page</a>
+                        </li>
+                        <li id="Li2" class="nav-item mb-3" runat="server">
+                            <a id="btnWorkout" class="nav-link btnGetApp" runat="server" visible="false"
+                                href="~/Pages/WorkOut/WorkOut.aspx">WorkOut</a>
+                        </li>
+                        <li id="Li1" class="nav-item mb-3" runat="server">
+                            <a id="btnDiet" class="nav-link btnGetApp" runat="server" visible="false"
+                                href="~/Pages/Meals/Meal.aspx">Diet Plan</a>
+                        </li>
+                         <li class="liNotifiction">
+                            <asp:LinkButton CssClass="lnkNotification" ID="lnkNotification" ClientIDMode="Static" runat="server">
+                                🔔
+                                <asp:Label ID="lblNotifCount" ClientIDMode="Static" runat="server" CssClass="lblNotifiCount">0</asp:Label>
+                                <div runat="server" class="notificationListDiv d-none" id="divshownotification">
+                                </div>
+                            </asp:LinkButton>
+                        </li>
+                        <li id="btnGetApp" class="nav-item mb-3" runat="server" visible="true">
+                            <a class="nav-link btnGetApp" runat="server" target="_blank" rel="noopener noreferrer"
+                                href="https://play.google.com/store/apps/details?id=com.rocks.fit">GET APP</a>
+                        </li>
+                        <li id="btnlogin" class="nav-item mb-3" runat="server" visible="false">
+                            <asp:LinkButton ID="btnManinLogin" class="nav-link btnlogin" runat="server" OnClick="btnManinLogin_Click">login</asp:LinkButton>
+                        </li>
+                        <li id="lstLogout" runat="server" class="nav-item dropdown" visible="false">
+                            <asp:LinkButton ID="btnLogout" runat="server"
+                                class="nav-link btnlogout" OnClick="btnLogout_Click">
+                                <i class="fa-solid fa-power-off" style="color: #ff0000;"></i></asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <%--My Profile--%>
+        <div id="MyProfile" runat="server" class="UsrProfileDiv" visible="false">
+            <div class="MyProfile divresponsive">
+                <div class="row">
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <img runat="server" id="UserProfileImg" class="userimg" />
+                    </div>
+                    <div id="DivProfile" runat="server" class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 userDetailsdiv">
+                        <asp:LinkButton ID="lnkProfileBtnClose" runat="server" CssClass="LnkProfileClose"
+                            OnClick="lnkProfileBtnClose_Click">
+                            <i class="fa-solid fa-xmark fa-fade" style="color: #ff0000;"></i></asp:LinkButton>
+                        <div class="userDetails">
+                            <div class="text-start">
+                                <asp:ImageButton ID="btnProEdit" ImageUrl="~/Images/Login/Edit.png"
+                                    class="logoedit" runat="server" OnClick="btnProEdit_Click" />
+                                <asp:Label ID="lblProUserFName" CssClass="lblUserName" runat="server">
+                                </asp:Label>
+                                <asp:Label ID="lblProUserLName" CssClass="lblUserName" runat="server"></asp:Label>
+                            </div>
+                            <div class="text-start">
+                                <asp:Label ID="lblProAge" CssClass="lblUser" runat="server"></asp:Label>
+                                <asp:Label ID="lblProGender" CssClass="lblUser" runat="server"></asp:Label>
+                            </div>
+                            <div class="text-start">
+                                <asp:Label ID="lblProWeight" CssClass="lblUser" runat="server"></asp:Label>
+                                <asp:Label ID="lblProHeight" CssClass="lblUser" runat="server"></asp:Label>
+                            </div>
+                            <div class="text-start">
+                                <asp:Label ID="lblProBMI" CssClass="lblUser" runat="server"></asp:Label>
+                                <asp:Label ID="lblProBMR" CssClass="lblUser" runat="server"></asp:Label>
+                                <asp:Label ID="lblProTDEE" CssClass="lblUser" runat="server"></asp:Label>
+                            </div>
+
+                            <div class="divOptions">
+                                <%--  <asp:LinkButton ID="lnkMyPlan" runat="server" CssClass="btnOptions" OnClick="lnkMyPlan_Click">
+                               &nbsp&nbsp 🏋️‍♂️  My Plan &nbsp&nbsp
+                                    <img runat="server" class="Img1" src="~/Images/Login/arrow.png" /></asp:LinkButton>--%<%-->&nbsp&nbsp--%>
+                                <asp:LinkButton ID="btnMyBodyTest" runat="server" CssClass="btnOptions"
+                                    OnClick="btnMyBodyTest_Click">
+                                   &nbsp&nbsp📝  In Body Test &nbsp&nbsp
+                                    <img runat="server" class="Img1" src="~/Images/Login/arrow.png" /></asp:LinkButton>&nbsp&nbsp
+                                  <asp:LinkButton ID="btnfeedback" runat="server" CssClass="btnOptions"
+                                      OnClick="btnfeedback_Click">
+                                    &nbsp&nbsp🎫  Testimonials &nbsp&nbsp
+                                    <img runat="server" class="Img1" src="~/Images/Login/arrow.png" /></asp:LinkButton>&nbsp&nbsp
+                                 <asp:LinkButton ID="btnattendance" runat="server" CssClass="btnOptions"
+                                     OnClick="btnattendance_Click">
+                                    &nbsp&nbsp👑  Attendance &nbsp&nbsp
+                                    <img runat="server" class="Img1" src="~/Images/Login/arrow.png" /></asp:LinkButton>&nbsp&nbsp  
+                                 <asp:LinkButton ID="btnswapping" runat="server" CssClass="btnOptions"
+                                     OnClick="btnswapping_Click">
+                             &nbsp&nbsp🔁  Slot Swap &nbsp&nbsp
+                                    <img runat="server" class="Img1" src="~/Images/Login/arrow.png" /></asp:LinkButton>&nbsp&nbsp
+                            </div>
+                            <%-- <div class="divOptions">
+                                <asp:LinkButton ID="btnswapping" runat="server" CssClass="btnOptions"
+                                    OnClick="btnswapping_Click">
+                             &nbsp&nbsp🔁  Slot Swap &nbsp&nbsp
+                                    <img runat="server" class="Img1" src="~/Images/Login/arrow.png" /></asp:LinkButton>&nbsp&nbsp
+                            </div>--%>
+                        </div>
+                    </div>
+                    <div id="DivEditProfile" runat="server" visible="false"
+                        class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <label class="lblHead">My Profile</label>
+                        <div class="DivMyProfile">
+                            <div class="row">
+                                <div class="col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3">
+                                            <div class="txtboxdiv">
+                                                <asp:TextBox ID="txtFirstName" AutoComplete="off"
+                                                    CssClass="txtbox" runat="server" placeholder=" " />
+                                                <asp:Label ID="lblMobile" CssClass="txtlabel" runat="server">
+                                                    First Name <span class="reqiredstar">*</span></asp:Label>
+                                            </div>
+                                            <asp:RequiredFieldValidator
+                                                ID="rfvtxtPassWord" ValidationGroup="MyProfile"
+                                                ControlToValidate="txtFirstName" runat="server" CssClass="rfvStyle"
+                                                Display="Dynamic" ErrorMessage="Enter First Name">
+                                            </asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3">
+                                            <div class="txtboxdiv">
+                                                <asp:TextBox ID="txtLastName" AutoComplete="off"
+                                                    CssClass="txtbox" runat="server" placeholder=" " />
+                                                <asp:Label ID="lblLastName" CssClass="txtlabel"
+                                                    runat="server">Last Name </asp:Label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3 text-start">
+                                            <asp:Label ID="lblgender" CssClass="lblGender"
+                                                runat="server">Gender <span class="reqiredstar">*</span></asp:Label>
+                                            <asp:RadioButtonList ID="rbtnGender" runat="server"
+                                                CssClass="rbnlbl" RepeatDirection="Horizontal">
+                                                <asp:ListItem Value="M">Male</asp:ListItem>
+                                                <asp:ListItem Value="F">Female</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                            <asp:RequiredFieldValidator
+                                                ID="RequiredFieldValidator1" ValidationGroup="MyProfile"
+                                                ControlToValidate="rbtnGender" runat="server" CssClass="rfvStyle"
+                                                Display="Dynamic" ErrorMessage="Select  Gender">
+                                            </asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3 text-start">
+                                            <asp:Label ID="Label3" CssClass="lblGender" runat="server">
+                                                Marital Status </asp:Label>
+                                            <asp:RadioButtonList ID="rbtnMaritalStatus" CssClass="rbnlbl"
+                                                runat="server" RepeatDirection="Horizontal">
+                                                <asp:ListItem Value="S">Single</asp:ListItem>
+                                                <asp:ListItem Value="M">Married</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                            <div class="txtboxdiv">
+                                                <asp:TextBox ID="txtDOB" AutoComplete="off"
+                                                    CssClass="txtbox ConvertfromDate" runat="server" placeholder=" " />
+                                                <asp:Label ID="Label4" CssClass="txtlabel" runat="server">DOB 
+                                                    <span class="reqiredstar">*</span></asp:Label>
+                                            </div>
+                                            <asp:RequiredFieldValidator
+                                                ID="RequiredFieldValidator2" ValidationGroup="MyProfile"
+                                                ControlToValidate="txtDOB" runat="server" CssClass="rfvStyle"
+                                                Display="Dynamic" ErrorMessage="Enter  DOB">
+                                            </asp:RequiredFieldValidator>
+                                        </div>
+
+
+                                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                            <div class="txtboxdiv">
+                                                <asp:TextBox ID="txtMobileNo" AutoComplete="off"
+                                                    onkeypress="return isNumber(event);" MaxLength="10" Enabled="false"
+                                                    CssClass="txtbox" runat="server" placeholder=" " />
+                                                <asp:Label ID="Label5" CssClass="txtlabel" runat="server">
+                                                    Mobile No <span class="reqiredstar">*</span></asp:Label>
+                                            </div>
+                                            <asp:RequiredFieldValidator
+                                                ID="RequiredFieldValidator3" ValidationGroup="MyProfile"
+                                                ControlToValidate="txtMobileNo" runat="server" CssClass="rfvStyle"
+                                                Display="Dynamic" ErrorMessage="Enter  Mobile No">
+                                            </asp:RequiredFieldValidator>
+                                            <asp:RegularExpressionValidator
+                                                ID="revMobileNo" runat="server" ControlToValidate="txtMobileNo"
+                                                ErrorMessage="Invalid Mobile No."
+                                                ValidationExpression="[0-9]{10}" CssClass="rfvStyle"
+                                                Display="Dynamic"
+                                                ValidationGroup="MyProfile">
+                                            </asp:RegularExpressionValidator>
+                                        </div>
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3">
+                                            <div class="txtboxdiv">
+                                                <asp:TextBox ID="txtMailId" AutoComplete="off"
+                                                    CssClass="txtbox" runat="server" placeholder=" " />
+                                                <asp:Label ID="Label6" CssClass="txtlabel" runat="server">Mail Id </asp:Label>
+                                            </div>
+                                            <asp:RegularExpressionValidator
+                                                ID="revEmailId" runat="server" ControlToValidate="txtMailId"
+                                                ErrorMessage="Invalid Email Id."
+                                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                                CssClass="rfvStyle"
+                                                Display="Dynamic">
+                                            </asp:RegularExpressionValidator>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                            <div class="txtboxdiv">
+                                                <asp:TextBox ID="txtAddress1" AutoComplete="off"
+                                                    CssClass="txtbox" runat="server" placeholder=" " />
+                                                <asp:Label ID="Label1" CssClass="txtlabel"
+                                                    runat="server">Address 1 </asp:Label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                            <div class="txtboxdiv">
+                                                <asp:TextBox ID="txtAddress2" AutoComplete="off"
+                                                    CssClass="txtbox" runat="server" placeholder=" " />
+                                                <asp:Label ID="Label2" CssClass="txtlabel"
+                                                    runat="server">Address 2 </asp:Label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-3">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                                    <div class="txtboxdiv">
+                                                        <asp:TextBox ID="txtPincode" AutoComplete="off"
+                                                            TabIndex="10" MaxLength="6" onkeypress="return isNumber(event);"
+                                                            CssClass="txtbox"
+                                                            onchange="myFunction()" runat="server" placeholder=" " />
+                                                        <asp:Label CssClass="txtlabel" runat="server">
+                                                            Pin Code <span class="reqiredstar">*</span></asp:Label>
+                                                    </div>
+                                                    <asp:RequiredFieldValidator ID="RfvPincode"
+                                                        ValidationGroup="MyProfile" ControlToValidate="txtPincode"
+                                                        runat="server" CssClass="rfvStyle"
+                                                        ErrorMessage="Enter Picode">
+                                                    </asp:RequiredFieldValidator>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                                                    <span runat="server" class="spanstyle">City :
+                                                    </span>
+                                                    <asp:Label ID="txtCity" CssClass="lblstyle"
+                                                        runat="server"></asp:Label>
+                                                    <br />
+                                                    <span runat="server" class="spanstyle">District :
+                                                    </span>
+                                                    <asp:Label ID="txtDistrict"
+                                                        CssClass="lblstyle" runat="server"></asp:Label>
+                                                    <br />
+                                                    <span runat="server" class="spanstyle">State :
+                                                    </span>
+                                                    <asp:Label ID="txtState" CssClass="lblstyle"
+                                                        runat="server"></asp:Label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <%--<asp:Image ID="imgpreview" ClientIDMode="Static" runat="server"
+                                        class="imgpreview" src="~/Pages/MyProfile/User.png" />--%>
+                                    <img id="imgpreview" clientidmode="Static" runat="server"
+                                        class="imgpreview" src="~/Pages/MyProfile/User.png" />
+                                    <asp:FileUpload ID="fuimage" CssClass="mx-4" TabIndex="3"
+                                        runat="server" onchange="showpreview(this);" />
+                                </div>
+                            </div>
+
+                            <div class="DivSubmit">
+                                <asp:Button CssClass="btnSubmit" ID="btnSubSubmit" runat="server" Text="Update"
+                                    ValidationGroup="MyProfile" OnClick="btnSubSubmit_Click" />
+                                <asp:Button ID="btnSubCancel" CssClass="btnCancel" runat="server"
+                                    Text="Cancel" OnClick="btnSubCancel_Click" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divMyBodyTest" runat="server" visible="false" class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <asp:LinkButton ID="lnkbtnMyBodytClose" runat="server" CssClass="LnkProfileCloseBody"
+                            OnClick="lnkbtnMyBodytClose_Click">
+                            <i class="fa-solid fa-xmark fa-fade" style="color: #ff0000;"></i></asp:LinkButton>
+                        <div id="head" style="display: flex; margin-top: 2rem;">
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 divTitle">
+                                <label class="lblHead">In Body Test</label>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 divAdd">
+                                <asp:LinkButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" CssClass="AddPlus">
+                                    <i class="fa-solid fa-plus"></i> Add</asp:LinkButton>
+                            </div>
+                        </div>
+                        <div id="divGrid" class="showContent divresponsive1" runat="server">
+                            <asp:Button ID="btnfake" runat="server" OnClick="OnClick" Style="display: none" />
+                            <asp:HiddenField ID="hfColumnRepeat" ClientIDMode="Static" runat="server" Value="3" />
+                            <asp:DataList ID="dtlUserBodyTest" runat="server" Width="100%" RepeatColumns="2">
+                                <ItemTemplate>
+                                    <div id="divtargetItems" runat="server"
+                                        class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6
+                                        divtargetItems2 ">
+                                        <div class="row">
+                                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                                <asp:Image ID="Img" runat="server"
+                                                    ImageUrl='<%#Bind("Image") %>' CssClass="ImageStyle" />
+                                            </div>
+                                            <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9"
+                                                style="text-align: center">
+                                                <div class="row">
+                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                        <asp:Label ID="Label1" runat="server"
+                                                            CssClass="divlbl" Text="Height :"></asp:Label>
+                                                        <asp:Label ID="lblheight" CssClass="divlabel"
+                                                            runat="server" Text='<%#Bind("height") %>'></asp:Label>
+
+                                                    </div>
+                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                        <asp:Label ID="Label3" runat="server" CssClass="divlbl"
+                                                            Text="Weight :"></asp:Label>
+                                                        <asp:Label ID="lblweight" CssClass="divlabel"
+                                                            runat="server" Text='<%#Bind("weight") %>'></asp:Label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                        <asp:Label ID="Label2" runat="server" CssClass="divlbl"
+                                                            Text="BMI :"></asp:Label>
+                                                        <asp:Label ID="lblBMI" CssClass="divlabel" runat="server"
+                                                            Text='<%#Bind("BMI") %>'></asp:Label>
+                                                    </div>
+                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                        <asp:Label ID="Label5" runat="server" CssClass="divlbl"
+                                                            Text="BMR :"></asp:Label>
+                                                        <asp:Label ID="lblBMR" CssClass="divlabel" runat="server"
+                                                            Text='<%#Bind("BMR") %>'></asp:Label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                        <asp:Label ID="Label7" runat="server" CssClass="divlbl"
+                                                            Text="TDEE :"></asp:Label>
+                                                        <asp:Label ID="lblTDEE" CssClass="divlabel" runat="server"
+                                                            Text='<%#Bind("TDEE") %>'></asp:Label>
+                                                    </div>
+                                                </div>
+                                                <div class="row divWeightRange">
+                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 
+                                                        divlabel divdate">
+                                                        <asp:Label ID="Label4" CssClass="divlabel" runat="server"
+                                                            Text='<%#Bind("Weightrange") %>'></asp:Label>
+                                                    </div>
+                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  
+                                                        divdate"
+                                                        style="text-align: end">
+                                                        <asp:Image ImageUrl="~/Images/UserInBodyTest/DateTime.svg"
+                                                            CssClass="date" runat="server"></asp:Image>
+                                                        <asp:Label ID="lbldate" CssClass="lblMyBodyDate" runat="server" Text='<%#Bind("date") %>'>
+                                                        </asp:Label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <asp:Label ID="lbluserId" runat="server" Text='<%#Bind("userId") %>'
+                                        Visible="false"></asp:Label>
+                                    <asp:Label ID="lblUserName" runat="server" Text='<%#Bind("UserName") %>'
+                                        Visible="false"></asp:Label>
+                                    <asp:Label ID="lbldob" runat="server" Text='<%#Bind("dob") %>'
+                                        Visible="false"></asp:Label>
+                                    <asp:Label ID="lblgender" runat="server" Text='<%#Bind("gender") %>'
+                                        Visible="false"></asp:Label>
+                                    <asp:Label ID="lblfatPercentage" runat="server"
+                                        Text='<%#Bind("fatPercentage") %>' Visible="false"></asp:Label>
+                                    <asp:Label ID="lblWorkOutStatus" runat="server"
+                                        Text='<%#Bind("WorkOutStatus") %>' Visible="false"> </asp:Label>
+                                    <asp:Label ID="lblWorkOutValue" runat="server"
+                                        Text='<%#Bind("WorkOutValue") %>' Visible="false"></asp:Label>
+                                    <asp:Label ID="lblage" runat="server" Text='<%#Bind("age") %>'
+                                        Visible="false"></asp:Label>
+                                </ItemTemplate>
+                            </asp:DataList>
+                        </div>
+                        <div class="DivMyProfile" id="divUserForm" runat="server" visible="false">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtname" AutoComplete="off"
+                                            CssClass="txtbox" runat="server" placeholder=" " TabIndex="1" />
+                                        <asp:Label CssClass="txtlabel" runat="server">Name 
+                                            <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="rfvName" ValidationGroup="UserEnroll"
+                                        ControlToValidate="txtname" runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter Name">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtMBTDOB" AutoComplete="off" AutoPostBack="true" OnTextChanged="txtMBTDOB_TextChanged"
+                                            CssClass="txtbox ConvertfromDate" runat="server" TabIndex="2" placeholder=" " />
+                                        <asp:Label CssClass="txtlabel" runat="server">Date Of Birth <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RfvDOB"
+                                        ValidationGroup="UserEnroll" ControlToValidate="txtDOB"
+                                        runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter Date Of Birth">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtage" AutoComplete="off"
+                                            CssClass="txtbox" runat="server" placeholder=" "
+                                            TabIndex="4" MaxLength="3"
+                                            onkeypress="return isNumber(event);"
+                                            OnTextChanged="txtage_TextChanged" AutoPostBack="true" />
+                                        <asp:Label CssClass="txtlabel" runat="server">Age 
+                                            <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="Rfvage"
+                                        ValidationGroup="UserEnroll" ControlToValidate="txtage"
+                                        runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter Age">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 mb-3">
+                                    <asp:DropDownList ID="ddlGender" CssClass="form-select" runat="server" TabIndex="3"
+                                        OnSelectedIndexChanged="ddlGender_SelectedIndexChanged" AutoPostBack="true">
+                                        <asp:ListItem Value="0">Gender *</asp:ListItem>
+                                        <asp:ListItem Value="F">Female </asp:ListItem>
+                                        <asp:ListItem Value="M">Male </asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" InitialValue="0"
+                                        ValidationGroup="UserEnroll" ControlToValidate="ddlGender"
+                                        runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Select Gender">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtweight" AutoComplete="off"
+                                            CssClass="txtbox" runat="server" placeholder=" " TabIndex="5"
+                                            onkeypress="return AllowOnlyAmountAndDot(this.id);" MaxLength="4"
+                                            OnTextChanged="txtweight_TextChanged" AutoPostBack="true" />
+                                        <asp:Label CssClass="txtlabel" runat="server">Weight in Kg 
+                                            <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="Rfvweight"
+                                        ValidationGroup="UserEnroll" ControlToValidate="txtweight"
+                                        runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter Weight">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtheight" AutoComplete="off"
+                                            CssClass="txtbox" runat="server" placeholder=" " TabIndex="6"
+                                            onkeypress="return AllowOnlyAmountAndDot(this.id);" MaxLength="4"
+                                            OnTextChanged="txtheight_TextChanged" AutoPostBack="true" />
+                                        <asp:Label CssClass="txtlabel" runat="server">Height in cms 
+                                            <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="Rfvheight" ValidationGroup="UserEnroll"
+                                        ControlToValidate="txtheight" runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter Height">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtfat" AutoComplete="off"
+                                            CssClass="txtbox" runat="server" placeholder=" " TabIndex="7"
+                                            onkeyup="this.value = minmax(this.value, 0, 100);"
+                                            onkeypress="return isNumber(event);"
+                                            MaxLength="3" />
+                                        <asp:Label CssClass="txtlabel" runat="server">Fat % 
+                                            <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RfvFat" ValidationGroup="UserEnroll"
+                                        ControlToValidate="txtfat" runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter Fat">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                    <asp:DropDownList ID="ddlWorkOutDetails" CssClass="form-select"
+                                        runat="server" TabIndex="8"
+                                        OnSelectedIndexChanged="ddlWorkOutDetails_SelectedIndexChanged"
+                                        AutoPostBack="true">
+                                        <asp:ListItem Value="0">WorkOut Details *</asp:ListItem>
+                                        <asp:ListItem Value="1.2">I Don't Workout</asp:ListItem>
+                                        <asp:ListItem Value="1.375">1-5 times/week </asp:ListItem>
+                                        <asp:ListItem Value="1.55">3-7 times/week  </asp:ListItem>
+                                        <asp:ListItem Value="1.9">7+ times/week </asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5"
+                                        InitialValue="0" ValidationGroup="UserEnroll"
+                                        ControlToValidate="ddlWorkOutDetails" runat="server"
+                                        CssClass="rfvStyle"
+                                        ErrorMessage="Select WorkOutDetails">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtBMI" AutoComplete="off" CssClass="txtbox"
+                                            runat="server" placeholder=" " TabIndex="9" Enabled="false" />
+                                        <asp:Label CssClass="txtlabel" runat="server">BMI 
+                                            <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RfvBMI" ValidationGroup="UserEnroll"
+                                        ControlToValidate="txtBMI" runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter BMI">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtBMR" AutoComplete="off" CssClass="txtbox"
+                                            runat="server" placeholder=" " TabIndex="10" Enabled="false" />
+                                        <asp:Label CssClass="txtlabel" runat="server">BMR 
+                                            <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RfvBMR" ValidationGroup="UserEnroll"
+                                        ControlToValidate="txtBMR" runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter BMR">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtTDEE" AutoComplete="off" CssClass="txtbox"
+                                            runat="server" placeholder=" " TabIndex="11" Enabled="false" />
+                                        <asp:Label CssClass="txtlabel" runat="server">TDEE 
+                                            <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RfvTDEE" ValidationGroup="UserEnroll"
+                                        ControlToValidate="txtTDEE" runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter TDEE">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <asp:Button CssClass="btnSubmit" ID="btnMyBodySubmit" TabIndex="12"
+                                    OnClick="btnMyBodySubmit_Click"
+                                    runat="server" Text="Submit" ValidationGroup="UserEnroll" />
+                                <asp:Button ID="btnMyBodyCancel" OnClick="btnMyBodyCancel_Click"
+                                    CssClass="btnCancel" TabIndex="13"
+                                    CausesValidation="false" runat="server" Text="Cancel" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivMyfeedback" runat="server" visible="false" class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <asp:LinkButton ID="btnfeedbackclose" runat="server" CssClass="LnkProfileCloseBody"
+                            OnClick="btnfeedbackclose_Click"><i class="fa-solid fa-xmark fa-fade" style="color: #ff0000;"></i></asp:LinkButton>
+                        <div id="head" style="display: flex; margin-top: 2rem;">
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 divTitle">
+                                <label class="lblHead">Testimonials</label>
+                            </div>
+                        </div>
+
+                        <div id="divgridtestimonial" class="showContent divresponsive1" runat="server" style="margin-bottom: 0px !important; margin-top: 7rem;">
+                            <asp:DataList ID="DataListtestimonial" runat="server" Width="100%" RepeatColumns="2">
+                                <ItemTemplate>
+                                    <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9"
+                                        style="text-align: center">
+                                        <div class="row">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <asp:Label ID="Label8" runat="server"
+                                                    CssClass="divlbl" Text="Rating :"></asp:Label>
+                                                <asp:Label ID="Label9" CssClass="divlabel"
+                                                    runat="server" Text='<%#Bind("feedbackRating") %>'></asp:Label>
+
+                                            </div>
+
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <asp:Label ID="Label1" runat="server"
+                                                    CssClass="divlbl" Text="Comment :"></asp:Label>
+                                                <asp:Label ID="lblheight" CssClass="divlabel"
+                                                    runat="server" Text='<%#Bind("feedbackComment") %>'></asp:Label>
+
+                                            </div>
+
+                                        </div>
+                                </ItemTemplate>
+                            </asp:DataList>
+                        </div>
+                        <div class="DivMyProfile" id="Divtestimonialcontent" runat="server" visible="true">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 mb-3">
+                                    <asp:DropDownList ID="ddlrating" CssClass="form-select" runat="server" TabIndex="3">
+                                        <asp:ListItem Value="0">Rating*</asp:ListItem>
+                                        <asp:ListItem Value="1">1 </asp:ListItem>
+                                        <asp:ListItem Value="2">2</asp:ListItem>
+                                        <asp:ListItem Value="3">3</asp:ListItem>
+                                        <asp:ListItem Value="4">4</asp:ListItem>
+                                        <asp:ListItem Value="5">5</asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" InitialValue="0"
+                                        ValidationGroup="Userfeedback" ControlToValidate="ddlrating"
+                                        runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Select Rating">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+
+                                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 mb-3">
+                                    <asp:DropDownList ID="dispalaystatus" CssClass="form-select" runat="server" TabIndex="3">
+                                        <asp:ListItem Value="0">Display Status *</asp:ListItem>
+                                        <asp:ListItem Value="Y">Yes </asp:ListItem>
+                                        <asp:ListItem Value="N">No </asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" InitialValue="0"
+                                        ValidationGroup="Userfeedback" ControlToValidate="dispalaystatus"
+                                        runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Select Display Status">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtfeedbackcomment" AutoComplete="off" TextMode="MultiLine"
+                                            CssClass="txtbox" runat="server" placeholder=" " TabIndex="1" />
+                                        <asp:Label CssClass="txtlabel" runat="server">Comment 
+                                            <span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup="Userfeedback"
+                                        ControlToValidate="txtfeedbackcomment" runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter Comment">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+
+
+
+                            <div class="text-end">
+                                <asp:Button CssClass="btnSubmit" ID="btnfeedbacksubmit" TabIndex="12"
+                                    OnClick="btnfeedbacksubmit_Click"
+                                    runat="server" Text="Submit" ValidationGroup="Userfeedback" />
+                                <asp:Button ID="btnfeedbackcancel" OnClick="btnfeedbackcancel_Click"
+                                    CssClass="btnCancel" TabIndex="13"
+                                    CausesValidation="false" runat="server" Text="Cancel" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divMyattendance" runat="server" visible="false" class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <asp:LinkButton ID="btnattendanceclose" runat="server" CssClass="LnkProfileCloseBody"
+                            OnClick="btnattendanceclose_Click"><i class="fa-solid fa-xmark fa-fade" style="color: #ff0000;"></i></asp:LinkButton>
+                        <div id="head" style="display: flex; margin-top: 2rem;">
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 divTitle">
+                                <label class="lblHead">Attendance</label>
+                            </div>
+                        </div>
+                        <div class="userattendance">
+                            <div id="divGridView" runat="server" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 table-responsive" style="margin-bottom: 0px !important; margin-top: 7rem;">
+                                <asp:GridView ID="gvTrainer" Style="font-size: 1.5rem" runat="server" DataKeyNames="uniqueId" AutoGenerateColumns="false"
+                                    CssClass="table table-striped table-hover border">
+                                    <Columns>
+                                        <asp:TemplateField HeaderText="Sl.No.">
+                                            <ItemTemplate>
+                                                <%#Container.DataItemIndex+1 %>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="uniquId" Visible="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lbluniqueId" runat="server" Text='<%#Bind("uniqueId") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="GymOwnerId" Visible="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblgymOwnerId" runat="server" Text='<%#Bind("gymOwnerId") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="BranchId" Visible="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblbranchId" runat="server" Text='<%#Bind("branchId") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Trainer Name" Visible="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblempName" runat="server" Text='<%#Bind("UserName") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="empId" Visible="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblempId" runat="server" Text='<%#Bind("UserId") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Date" Visible="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lbllogDate" runat="server" Text='<%#Bind("logDate") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="InTime" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblinTime" runat="server" Text='<%#Bind("inTime") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="OutTime" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lbloutTime" runat="server" Text='<%#Bind("outTime") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Attendance" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblattendance" runat="server" Text='<%#Bind("attendance") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+
+                                        <asp:TemplateField HeaderText="Edit" HeaderStyle-CssClass="gvHeader">
+                                            <ItemTemplate>
+                                                <asp:ImageButton
+                                                    ID="LnkEdit"
+                                                    runat="server"
+                                                    src="../../Images/Login/Edit.png" alt="image" Width="25"
+                                                    Text="Edit" OnClick="LnkEdit_Click" />
+                                            </ItemTemplate>
+
+                                            <ItemStyle HorizontalAlign="Center" />
+                                        </asp:TemplateField>
+                                    </Columns>
+                                </asp:GridView>
+                            </div>
+                        </div>
+                        <div class="DivMyProfile" id="divattendanceentry" runat="server" visible="false">
+                            <div class="row">
+                                <%--  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-4">
+                            <asp:DropDownList ID="ddlTrainerattendanceList" CssClass="form-select" TabIndex="1" runat="server">
+                            </asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RfvTrainerList" ValidationGroup="TrainerAttendance"
+                                ControlToValidate="ddlTrainerattendanceList" runat="server" CssClass="rfvStyle"
+                                ErrorMessage="Select Trainer" InitialValue="0">
+                            </asp:RequiredFieldValidator>
+                        </div>--%>
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3" id="divlogdate" runat="server">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtlogDate" AutoComplete="Off" TabIndex="4" CssClass="txtbox ConvertfromDate" runat="server" placeholder=" " />
+                                        <asp:Label CssClass="txtlabel" runat="server">Log Date<span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RfvlogDate" ValidationGroup="TrainerAttendance" ControlToValidate="txtlogDate" runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter Log Date">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3" id="divintime" runat="server">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtShiftStartTime" CssClass="txtbox timePicker" TabIndex="3" runat="server" placeholder=" " />
+                                        <asp:Label CssClass="txtlabel" runat="server">InTime <span class="reqiredstar">*</span>
+                                        </asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RfvtxtShiftStartTime" ValidationGroup="TrainerAttendance" ControlToValidate="txtShiftStartTime" runat="server"
+                                        CssClass="rfvStyle" ErrorMessage="InTime">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3" id="divouttime" runat="server" visible="false">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtShiftEndTime" CssClass="txtbox timePicker" TabIndex="3" runat="server" placeholder=" " />
+                                        <asp:Label CssClass="txtlabel" runat="server">OutTime <span class="reqiredstar">*</span>
+                                        </asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RfvtxtShiftEndTime" ValidationGroup="TrainerAttendance" ControlToValidate="txtShiftEndTime" runat="server"
+                                        CssClass="rfvStyle" ErrorMessage="Enter OutTime">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <asp:Button CssClass="btnSubmit" ID="btnattendancesubmit" TabIndex="12"
+                                    OnClick="btnattendancesubmit_Click"
+                                    runat="server" Text="Submit" ValidationGroup="Userfeedback" />
+                                <asp:Button ID="btnattendancecancel" OnClick="btnattendancecancel_Click"
+                                    CssClass="btnCancel" TabIndex="13"
+                                    CausesValidation="false" runat="server" Text="Cancel" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Divslotswapping" runat="server" visible="false" class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <asp:LinkButton ID="btncloseswapping" runat="server" CssClass="LnkProfileCloseBody"
+                            OnClick="btncloseswapping_Click"><i class="fa-solid fa-xmark fa-fade" style="color: #ff0000;"></i></asp:LinkButton>
+                        <div id="head" style="display: flex; margin-top: 2rem;">
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 divTitle">
+                                <label class="lblHead">Slot Swapping</label>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 divAdd" style="margin-bottom: 0px !important; margin-top: 4rem;">
+                                <asp:LinkButton ID="btnswapadd" runat="server" OnClick="btnswapadd_Click" CssClass="AddPlus">
+                  <img runat="server" src="~/Images/UserInBodyTest/images.png" class="btnAdd1" /></asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="userattendance">
+                            <div id="divswapping" runat="server" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 table-responsive" style="margin-bottom: 0px !important; margin-top: 7rem;">
+                                <div class="row" id="Div1" runat="server" visible="false">
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                                        <asp:Label ID="Label10" runat="server"> Swap Type : </asp:Label>
+                                        <asp:Label ID="userswapType1" CssClass="userplandetails" runat="server"></asp:Label>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                                        <asp:Label ID="Label12" runat="server"> Slot Timing : </asp:Label>
+                                        <asp:Label ID="userslot1" CssClass="userplandetails" runat="server"></asp:Label>
+                                    </div>
+                                </div>
+                                <asp:GridView ID="GridViewuserswapp" Style="font-size: 1.5rem" runat="server" DataKeyNames="uniqueId" AutoGenerateColumns="false"
+                                    CssClass="table table-striped table-hover border">
+                                    <Columns>
+                                        <asp:TemplateField HeaderText="Sl.No.">
+                                            <ItemTemplate>
+                                                <%#Container.DataItemIndex+1 %>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="uniquId" Visible="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lbluniqueId" runat="server" Text='<%#Bind("uniqueId") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="oldslotId" Visible="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lbloldslotId" runat="server" Text='<%#Bind("slotId") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="UserName" Visible="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblUserName" runat="server" Text='<%#Bind("UserName") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+
+                                        <asp:TemplateField HeaderText="Date" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblFromDate" runat="server" Text='<%#Bind("Date") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Slot Time" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblOldSlotTime" runat="server" Text='<%#Bind("OldSlotTime") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                        </asp:TemplateField>
+                                    </Columns>
+                                </asp:GridView>
+                            </div>
+                        </div>
+                        <div class="DivMyProfile" id="divswappentry" runat="server" visible="false">
+                            <div class="row" id="Userplandetails" runat="server" visible="false">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                                    <asp:Label ID="lbluserswaptype" CssClass="lblSwapType" runat="server"> Swap Type : </asp:Label>
+                                    <asp:Label ID="userswapType" CssClass="lblSwapType" runat="server"></asp:Label>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                                    <asp:Label ID="lblslot" CssClass="lblSlottimig" runat="server"> Slot Timing : </asp:Label>
+                                    <asp:Label ID="userslot" CssClass="lblSlottimig" runat="server"></asp:Label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-3" id="div2" runat="server">
+                                    <div class="txtboxdiv">
+                                        <asp:TextBox ID="txtswapdate" AutoComplete="Off" TabIndex="4" CssClass="txtbox ConvertfromDate" runat="server" placeholder=" " />
+                                        <asp:Label CssClass="txtlabel" runat="server">From Date<span class="reqiredstar">*</span></asp:Label>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ValidationGroup="Userslotswap" ControlToValidate="txtswapdate" runat="server" CssClass="rfvStyle"
+                                        ErrorMessage="Enter From Date">
+                                    </asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-3">
+                                    <div class="divSlotlist">
+                                        <asp:RadioButtonList ID="chkSlotList" runat="server" RepeatDirection="Vertical" CssClass="rbnlbl"
+                                            RepeatColumns="1" AutoPostBack="true">
+                                        </asp:RadioButtonList>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <asp:Button CssClass="btnSubmit" ID="btnsubmitswapping" TabIndex="12"
+                                    OnClick="btnsubmitswapping_Click"
+                                    runat="server" Text="Submit" ValidationGroup="Userfeedback" />
+                                <asp:Button ID="btncancelswapping" OnClick="btncancelswapping_Click"
+                                    CssClass="btnCancel" TabIndex="13"
+                                    CausesValidation="false" runat="server" Text="Cancel" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="FitnessContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <asp:HiddenField ID="hfState" runat="server" EnableViewState="true" />
+        <asp:HiddenField ID="hfDistrict" runat="server" EnableViewState="true" />
+        <asp:HiddenField ID="hfCity" runat="server" EnableViewState="true" />
+        <asp:HiddenField ID="hfImageUrl" runat="server" EnableViewState="true" />
+        <asp:HiddenField ID="hfImageUrls" runat="server" EnableViewState="true" />
+        <asp:HiddenField ID="hfNotificationPosturl" ClientIDMode="Static" runat="server" EnableViewState="true" />
+        <asp:HiddenField ID="hfNotificationURl" ClientIDMode="Static" runat="server" EnableViewState="true" />
+        <asp:HiddenField ID="hfTokenURl" runat="server" ClientIDMode="Static" EnableViewState="true" />
+        <asp:HiddenField ID="hfNotificationURlData" ClientIDMode="Static" runat="server" EnableViewState="true" />
+
+        <%--Login--%>
+
+        <%-- <style>
+            #google-button {
+                margin-top: 0px;
+            }
+
+            .container {
+                margin: 20px;
+                background-color: rgba(66, 133, 244, 0.15);
+                padding: 10px;
+                border-radius: 10px;
+                width: 450px;
+                margin-top: 25px;
+                display: none;
+            }
+
+
+            .id,
+            .email,
+            .name {
+                display: inline-block;
+                font-family: 'Verdana';
+            }
+
+            .name {
+                font-size: 30px;
+                position: relative;
+                top: -16px;
+                margin-left: 5px;
+            }
+
+            lable {
+                font-family: 'Arial Black';
+            }
+
+            button {
+                display: block;
+                background-color: #4285F4;
+                border: 0px;
+                padding: 8px 20px;
+                color: white;
+                margin-top: 15px;
+                cursor: pointer;
+                outline: none;
+            }
+
+            .btnResnd {
+                width: 105px;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 9px 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: transform 80ms ease-in;
+                border-radius: 0.5rem;
+            }
+
+            .rfvColor {
+                color: red;
+            }
+        </style>--%>
+        <!-- Single Login popup Styles -->
+        <link href="CustomStyles/Login/SingleLogin.css" rel="stylesheet" />
+        <%--Content Page Css--%>
+        <link href="Pages/Master/popupLoginHome.css" rel="stylesheet" />
+
+        <%--Login Stylesheet--%>
+        <link href="Pages/Master/popupContentPageHome.css" rel="stylesheet" />
+
+
+        <div id="SingleLogin_Overlay"
+            class="SingleLogin_Overlay d-none"
+            onclick="javascript:__doPostBack('LnkbtnSingleLoginClose','')"
+            runat="server">
+        </div>
+        <div id="SingleLogin_Popup" class="SingleLogin_Popup d-none" runat="server">
+            <div class="PopUp_Close">
+                <div>
+                    <a
+                        onclick="javascript:__doPostBack('LnkbtnSingleLoginClose','')"
+                        class="fa-solid fa-xmark fa-close"></a>
+                </div>
+            </div>
+            <div class="Popup_Info">
+                <svg
+                    width="60px"
+                    height="60px"
+                    viewBox="0 0 60 60"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#212529"
+                    class="bi bi-exclamation-square-fill">
+                    <path
+                        d="M7.5 0a7.5 7.5 0 0 0 -7.5 7.5v45a7.5 7.5 0 0 0 7.5 7.5h45a7.5 7.5 0 0 0 7.5 -7.5V7.5a7.5 7.5 0 0 0 -7.5 -7.5H7.5zm22.5 15c2.006 0 3.577 1.733 3.375 3.731l-1.313 13.151a2.07 2.07 0 0 1 -4.125 0L26.625 18.731A3.394 3.394 0 0 1 30 15zm0.007 22.5a3.75 3.75 0 1 1 0 7.5 3.75 3.75 0 0 1 0 -7.5z" />
+                </svg>
+            </div>
+            <div class="Popup_InfoMessage">
+                <div class="Message_Head">
+                    Your session is currently active in another window/browser/system.
+                </div>
+                <div class="Message_Body">
+                    Click <strong class="MessageBody_Ok">Ok</strong> to close your previous session and login to new session.
+                </div>
+            </div>
+            <div class="PopUp_Ok">
+                <%--<input type="button"  onclick="javascript:__doPostBack('btnSingleLoginPopUpOk','')" value="Ok" class="btn btn-dark btnOk" />--%>
+                <asp:Button
+                    ID="Button1"
+                    OnClick="btnSingleLoginPopUpOk_Click"
+                    ClientIDMode="Static"
+                    runat="server"
+                    CssClass="btn btn-dark btnOk"
+                    Text="ok" />
+            </div>
+        </div>
+        <asp:LinkButton
+            ID="LnkbtnSingleLoginClose"
+            runat="server"
+            ClientIDMode="Static"
+            OnClick="LnkbtnSingleLoginClose_Click"
+            CssClass="d-none">
+        </asp:LinkButton>
+        <asp:Button
+            ID="btnSingleLoginPopUpOk"
+            OnClick="btnSingleLoginPopUpOk_Click"
+            ClientIDMode="Static"
+            runat="server"
+            CssClass="d-none"
+            Text="ok" />
+        <div id="DivLogin" runat="server" class="DisplyCard1" visible="false">
+            <div class="LoginCard">
+                <div class="row Logincontent">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 LoginHeight">
+
+                        <a>
+                            <img src="~/Images/Login/PaypreLogo.png" class="LoginLogoImage" runat="server" /></a>
+                        <div class="LoginDatas">
+                            <p class="LoginHeader">Let's Get Started</p>
+                            <%--<p class="LoginSubHeader">Let's Get Started</p>--%>
+
+                            <div class="txtboxdiv">
+                                <asp:TextBox ID="txtMobileNoLogin" MaxLength="10" onkeydown="return (event.keyCode!=13)" MinLength="10" AutoComplete="off" ClientIDMode="Static"
+                                    onKeyPress="return isNumber(event)" CssClass="txtbox" runat="server" placeholder=" " />
+                                <asp:Label ID="lblMobileLogin" ClientIDMode="Static" CssClass="txtlabel" runat="server">Mobile No. <span class="reqiredstar">*</span></asp:Label>
+                            </div>
+                            <asp:RequiredFieldValidator ID="RfvtxtMobileNo" runat="server"
+                                ControlToValidate="txtMobileNoLogin" ErrorMessage="Enter MobileNo" CssClass="rfvColor"></asp:RequiredFieldValidator>
+
+                            <div class="txtboxdiv">
+                                <asp:TextBox ID="txtotp" ClientIDMode="Static" onkeydown="return (event.keyCode!=13)" AutoComplete="off" CssClass="txtbox" Visible="false" runat="server" placeholder=" " />
+                                <asp:Label CssClass="txtlabel" ClientIDMode="Static" ID="lblOtp" Visible="false" runat="server">OTP <span class="reqiredstar">*</span></asp:Label>
+                            </div>
+
+                            <div class="txtboxdiv">
+                                <asp:TextBox ID="txtMail" ClientIDMode="Static" AutoPostBack="true" MaxLength="10" OnTextChanged="txtMail_TextChanged" MinLength="10" AutoComplete="off" CssClass="txtbox d-none" runat="server" />
+                                <asp:Label ID="lblMail" ClientIDMode="Static" CssClass="txtlabel d-none" runat="server">Mail Id. <span class="reqiredstar">*</span></asp:Label>
+                            </div>
+                            <div class="LoginButton">
+                                <asp:Button ID="btnSendOTP" ClientIDMode="Static" CssClass="btnSubmit d-none" runat="server" Text="Send OTP" OnClick="btnSendOTP_Click" />
+                                <asp:Button ID="btnCancel" ClientIDMode="Static" CssClass="btnCancel d-none" runat="server" Text="Cancel" />
+                            </div>
+                            <div class="LoginResendButton">
+                                <asp:Button ID="btnCfmOtp" ClientIDMode="Static" runat="server" CssClass="btnVerify" Visible="false" ValidationGroup="OTP" OnClick="btnCfmOtp_Click"
+                                    Text="Verify & Login" />
+                                <asp:Button ID="btnResend" ClientIDMode="Static" runat="server" class="btnResnd" Visible="false" OnClick="btnResend_Click" />
+                            </div>
+
+
+                            <div class="LoginGmail">
+                                <p class="LoginGmailHeader">or Login / SignUp </p>
+                                <div class="divSingUpOption">
+                                    <div class="row socialmedia">
+                                        <div id="google-button" class="imgText">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <asp:HiddenField ID="hfOtp" runat="server" />
+                <asp:HiddenField ID="hfMobileNo" runat="server" />
+
+            </div>
+        </div>
+
+        <script src="https://accounts.google.com/gsi/client"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            var googleButton = document.getElementById('google-button');
+
+            // function to get response
+            function handleCredentialResponse(response) {
+                var responsePayload = decodeJwtResponse(response.credential);
+                document.getElementById('txtMail').classList.remove('d-none');
+                document.getElementById('lblMail').classList.remove('d-none');
+                document.getElementById('txtMobileNoLogin').classList.add('d-none');
+                document.getElementById('lblMobileLogin').classList.add('d-none');
+                document.getElementById('txtMail').value = responsePayload.email;
+                googleButton.style.display = 'none';
+                //document.getElementById("txtMobileNo").click();
+                $(document.getElementById('txtMail')).change();
+            }
+
+            window.onload = function () {
+                google.accounts.id.initialize({
+                    // client_id: "351957529447-531uvcccddpt51cu76k18dji3spg2tne.apps.googleusercontent.com",
+                    client_id: "135455860385-caqagcqpt8tbgp74e6rphncd3if3gi5r.apps.googleusercontent.com",
+                    callback: handleCredentialResponse,
+                    auto_select: false,
+                    auto: true
+                });
+                google.accounts.id.renderButton(
+                    document.getElementById("google-button"),
+                    { theme: 'filled_black', size: "medium", width: '200', shape: "pill" }
+                );
+                google.accounts.id.prompt();
+            }
+
+            // function to decode the response.credential
+            function decodeJwtResponse(token) {
+
+                var base64Url = token.split('.')[1];
+                var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                var jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+                return JSON.parse(jsonPayload);
+            }
+
+            $(document.getElementById('txtMobileNoLogin')).keyup(function () {
+
+                var count = document.getElementById('txtMobileNoLogin').value
+                if (count.length == 10) {
+                    document.getElementById('btnSendOTP').classList.remove('d-none');
+                    document.getElementById('btnCancel').classList.remove('d-none');
+                    document.getElementById('txtMobileNoLogin').readOnly = true;
+                }
+            });
+
+            $(document.getElementById('btnCancel')).click(function () {
+                document.getElementById('txtMobileNoLogin').readOnly = false;
+                document.getElementById('txtMobileNoLogin').value = "";
+                document.getElementById('txtMail').value = "";
+                document.getElementById('btnSendOTP').classList.add('d-none');
+                document.getElementById('btnCancel').classList.add('d-none');
+            });
+        </script>
+        <%--Login End--%>
+    </form>
+    <script>
+        document.onclick = () => applyCursorRippleEffect(event);
+
+        function applyCursorRippleEffect(e) {
+            const ripple = document.createElement("div");
+
+            ripple.className = "ripple";
+            document.body.appendChild(ripple);
+
+            ripple.style.left = `${e.clientX}px`;
+            ripple.style.top = `${e.clientY}px`;
+            ripple.style.animation = `ripple-effect .4s  linear`;
+            ripple.onanimationend = () => {
+                document.body.removeChild(ripple);
+
+            }
+
+        }
+    </script>
+    <script>
+        // document.getElementById("txtPincode").addEventListener("change", myFunction);
+        function myFunction() {
+            var NewArea = $('[id*=txtPincode]').val();
+            event.preventDefault();
+            if (NewArea) {
+                fetch("https://api.postalpincode.in/pincode/" + $('[id*=txtPincode]').val())
+                    .then(response => response.json())
+                    .then(
+                        function (data) {
+                            if (data[0].Status == 'Success') {
+                                document.getElementById('<%=txtCity.ClientID%>').textContent = data[0].PostOffice[0].Block;
+                                document.getElementById('<%=txtDistrict.ClientID%>').textContent = data[0].PostOffice[0].District;
+                                document.getElementById('<%=txtState.ClientID%>').textContent = data[0].PostOffice[0].State;
+                                $('#<%=hfCity.ClientID%>').val(data[0].PostOffice[0].Block);
+                                $('#<%=hfDistrict.ClientID%>').val(data[0].PostOffice[0].District);
+                                $('#<%=hfState.ClientID%>').val(data[0].PostOffice[0].State);
+                                document.getElementById('<%=txtCity.ClientID%>').style.color = 'black';
+                            }
+                            else {
+                                if (data[0].PostOffice == null) {
+                                    document.getElementById('<%=txtCity.ClientID%>').textContent = 'Invalid Pincode';
+                                    document.getElementById('<%=txtDistrict.ClientID%>').textContent = '';
+                                    document.getElementById('<%=txtState.ClientID%>').textContent = '';
+                                    document.getElementById('<%=txtCity.ClientID%>').style.color = 'red';
+                                }
+
+                            }
+                        }
+                    )
+                    .catch()
+            }
+        }
+    </script>
+    <%--JQuery--%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <%--Flat Picker--%>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <%--DataPicker--%>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/4.5.1/1/MicrosoftAjax.js" type="text/javascript"></script>
+    <script>
+        const datepicker = document.getElementsByClassName('datePicker');
+        const fromDate = document.getElementsByClassName('fromDate');
+
+        const toDate = document.getElementsByClassName('toDate');
+        const ConvertfromDate = document.getElementsByClassName('ConvertfromDate');
+
+        const ConverttoDate = document.getElementsByClassName('ConverttoDate');
+        const dateTimepicker = document.getElementsByClassName('dateTimepicker');
+        const timePicker = document.getElementsByClassName('timePicker');
+        const daterangepicker = document.getElementsByClassName('daterangepicker');
+
+        let date = new Date();
+        var Todate;
+        let fp = flatpickr(daterangepicker,
+            {
+                mode: "range",
+                minDate: "today",
+                dateFormat: "d-m-Y",
+
+            });
+
+        fp = flatpickr(datepicker,
+            {
+                enableTime: false,
+                dateFormat: "d-m-Y",
+                altFormat: "d-m-Y",
+                altInput: true,
+                time_24hr: false,
+                minDate: "today",
+                onOpen: function () {
+                    const numInput = document.querySelectorAll('.numInput');
+                    numInput.forEach((input) => input.type = '');
+                }
+
+            });
+        fp = flatpickr(toDate,
+            {
+                enableTime: false,
+                dateFormat: "Y-m-d",
+                altFormat: "d-m-Y",
+                altInput: true,
+                time_24hr: false
+            });
+
+        fp = flatpickr(fromDate,
+            {
+                enableTime: false,
+                dateFormat: "Y-m-d",
+                altFormat: "d-m-Y",
+                altInput: true,
+                time_24hr: false,
+                onOpen: function () {
+                    const numInput = document.querySelectorAll('.numInput');
+                    numInput.forEach((input) => input.type = '');
+                },
+                onChange: function (selectedDates, dateStr, instance) {
+                    toDate[0].value = '';
+                    flatpickr(toDate,
+                        {
+                            enableTime: false,
+                            dateFormat: "Y-m-d",
+                            altFormat: "d-m-Y",
+                            altInput: true,
+                            time_24hr: false,
+                            minDate: dateStr
+                        });
+                },
+            });
+
+        fp = flatpickr(ConverttoDate,
+            {
+                enableTime: false,
+                dateFormat: "d-m-Y",
+                altFormat: "d-m-Y",
+                altInput: true,
+                time_24hr: false
+            });
+
+        fp = flatpickr(ConvertfromDate,
+            {
+                enableTime: false,
+                dateFormat: "d-m-Y",
+                altFormat: "d-m-Y",
+                altInput: true,
+                time_24hr: false,
+                onOpen: function () {
+                    const numInput = document.querySelectorAll('.numInput');
+                    numInput.forEach((input) => input.type = '');
+                },
+                onChange: function (selectedDates, dateStr, instance) {
+                    toDate[0].value = '';
+                    flatpickr(ConverttoDate,
+                        {
+                            enableTime: false,
+                            dateFormat: "d-m-Y",
+                            altFormat: "d-m-Y",
+                            altInput: true,
+                            time_24hr: false,
+                            minDate: dateStr
+                        });
+                },
+            });
+
+        fp = flatpickr(timePicker,
+            {
+                enableTime: true,
+                noCalendar: true,
+                time_24hr: true,
+                dateFormat: "h:i K",
+                minTime: "today",
+
+            });
+
+        fp = flatpickr(dateTimepicker,
+            {
+                enableTime: true,
+                dateFormat: "d/m/Y h:i:K",
+                time_24hr: false,
+                minDate: "today",
+                onOpen: function () {
+                    const numInput = document.querySelectorAll('.numInput');
+                    numInput.forEach((input) => input.type = '');
+                },
+                maxDate: new Date().fp_incr(1) // 14 days from now
+            });
+
+    </script>
+
+
+    <script type="text/javascript">
+
+
+        function showpreview(input) {
+
+            var fup = document.getElementById("<%=fuimage.ClientID %>");
+            var fileName = fup.value;
+            var maxfilesize = 1024 * 1024;
+            filesize = input.files[0].size;
+            var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
+            if (ext == "gif" || ext == "GIF" || ext == "PNG" || ext == "png" || ext == "jpg" || ext == "JPG" || ext == "bmp" || ext == "BMP" || ext == "jpeg" || ext == "JPEG") {
+                if (filesize <= maxfilesize) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $('#<%=imgpreview.ClientID%>').prop('src', e.target.result);
+
+                        };
+                        reader.readAsDataURL(input.files[0]);
+                        var formData = new FormData()
+                        formData.append("file", $('input[type=file]')[0].files[0])
+                        $.ajax({
+                            url: '<%= Session["ImageUrl"].ToString() %>',
+                            type: 'POST',
+                            data: formData,
+                            contentType: false,
+                            processData: false,
+                            success: function (image) {
+
+                                $('#<%=hfImageUrls.ClientID%>').val(image.image);
+                                console.log(image);
+                                console.log(myHiddenField.value);
+
+                            },
+                            error: function (image) {
+                                alert('Error');
+                            }
+                        });
+                    }
+                }
+                else {
+                    swal("Please, Upload image file less than or equal to 1 MB !!!");
+                    fup.focus();
+                    return false;
+                }
+            }
+            else {
+                swal("Please, Upload Gif, Jpg, Jpeg or Bmp Images only !!!");
+                fup.focus();
+                return false;
+            }
+        }
+
+
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

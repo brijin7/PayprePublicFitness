@@ -1,0 +1,1114 @@
+﻿
+/*Scroll Bar*/
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #757575;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    height: 8px; /* height of horizontal scrollbar ← You're missing this */
+    width: 8px; /* width of vertical scrollbar */
+    border: 3px solid #e8ecf1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e8ecf1;
+    border-radius: 16px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+
+.lnkNav {
+    text-decoration: none;
+}
+
+.NavDetails {
+    background-color: #E8ECF1;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    position: sticky;
+    top: 7.2rem;
+    z-index: 3;
+}
+
+.dietworkout {
+    align-self: end;
+}
+
+.divDiet {
+    border: 1px solid #2c60af;
+    margin-top: -2.1rem;
+    z-index: 5;
+    border-radius: 0.5rem;
+    position: relative;
+}
+.divDtlDiet {
+    overflow: auto;
+    width: 100%;
+}
+
+
+
+.lblNavList {
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-right: 3rem;
+}
+
+    .lblNavList:hover {
+        color: #2C60AF;
+        padding: 10px 0px;
+        border-bottom: 3px solid #2C60AF;
+        color: #2C60AF;
+    }
+
+.NavListSelect {
+    color: #2C60AF;
+    padding: 10px 0px;
+    border-bottom: 3px solid #2C60AF;
+    color: #2C60AF;
+}
+
+.divHeadDtl {
+    position: sticky;
+    top: 11.2rem;
+    z-index: 3;
+    background-color: white;
+    padding: 2rem;
+}
+
+.DietWorkname {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #060606;
+}
+
+.Weeks {
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #3E3E3E;
+}
+
+.btnCategory {
+    padding: 0.5rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    background: white;
+    color: black;
+    font-weight: 600;
+}
+
+
+/*progress bar*/
+
+
+.divDays {
+    position: relative;
+    left: 5%;
+}
+
+.divDaysWorkOut {
+    position: relative;
+    left: 2%;
+}
+
+.lblDays {
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+progress {
+    width: 50%;
+    height: 0.6rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 20%);
+}
+
+    progress::-webkit-progress-bar {
+        background-color: #f5f5f5;
+        border-radius: 10px;
+    }
+
+    progress::-webkit-progress-value {
+        background-color: #42782E;
+        border-radius: 10px;
+    }
+
+.progressBar {
+    width: 50%;
+    height: 0.6rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 20%);
+}
+
+    .progressBar::-webkit-progress-value {
+        background-color: #F85757;
+        border-radius: 10px;
+    }
+
+.lblTraget {
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #A20812;
+}
+
+.lblConsumed {
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #42782E;
+}
+
+.divresponsiveDays {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.divMealTypeContainer {
+    position: relative;
+    left: 2%;
+    margin-top: 3rem;
+}
+
+.divMealType {
+    background-color: #EBEBEB;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 27rem;
+}
+
+.lblMealtype {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    color: black;
+}
+
+.lblKcl {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.lblTime {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.imgTime {
+    width: 1.3rem;
+    position: relative;
+    right: 5px;
+    top: -1px;
+}
+
+.divFoodContainer {
+    position: relative;
+    left: 2%;
+    margin-top: 3rem;
+}
+
+.divFooditem {
+    background-color: #E8ECF1;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+.Fooditem {
+    background: white;
+    text-align: center;
+    border-radius: 0.7rem;
+    margin-right: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.imgFood {
+    width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 7rem;
+    border-radius: 0.5rem;
+    filter: blur(4px);
+}
+
+.imgFoodLock {
+    width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 7rem;
+    border-radius: 0.5rem;
+}
+
+.imgDone {
+    width: 2rem;
+}
+
+.FooditemDetails {
+    text-align: center;
+    filter: blur(3px);
+}
+.FooditemDetailslock {
+    text-align: center;
+   
+}
+
+.lblFoodName {
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+.divFoodDls {
+    text-align: center;
+    text-align-last: start;
+    display: grid;
+    justify-content: center;
+}
+
+.lblFoodDtls {
+    font-size: 1rem;
+    display: block;
+    font-weight: 600;
+}
+
+.Foodlock {
+    background: #898989;
+}
+
+.imgLock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    z-index: 1;
+}
+
+.lockfoodimg {
+    opacity: 0.5;
+}
+
+.divSummary {
+    background: #F7F7F7;
+    border-radius: 0.5rem;
+    position: sticky;
+    top: 35%;
+    padding: 2rem;
+}
+
+.lblSummaryPlanHead {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.lblSummaryPlanSubHead {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.lblSummaryDateHead {
+    float: right;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #171717;
+}
+
+.lblSummaryDate {
+    float: right;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #171717;
+}
+
+.lblSummaryDuration {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #171717;
+}
+
+.lblSummaryAmt {
+    float: right;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #171717;
+}
+
+.lblSaveAmt {
+    float: right;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #171717;
+}
+
+.lblSummaryFinalHead {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 16px;
+    color: #262626;
+}
+
+.lblSummaryAmtFinal {
+    float: right;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 16px;
+    color: #262626;
+}
+
+.lblSummaryTotalHead {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 16px;
+    color: #000000;
+}
+
+.lblSummaryTotalAmt {
+    float: right;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 16px;
+    color: #000000;
+}
+
+.btnPayNow {
+    padding: 0.5rem;
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+
+/*WorkOut*/
+
+.lblVideosCount {
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #242424;
+    float: right;
+}
+
+.divWorkOut {
+    position: relative;
+    left: 2%;
+    margin-top: 5rem;
+}
+
+.WorkOurVideo {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.lblWorkOutHead {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 2rem;
+    color: #000000;
+    display: inline-block;
+}
+
+.lblWorkOutDtls {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #242424;
+}
+
+.WorkOutimgTime {
+    width: 1.3rem;
+    position: relative;
+    right: 2px;
+    top: -2px;
+}
+
+.imgShowHide {
+    width: 1.5rem;
+}
+
+.toggleViewClose {
+    rotate: 180deg;
+}
+
+/*plan*/
+
+.PlanImgContainer {
+    position: relative;
+}
+
+.CategoryImgBg {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.CategoryImg {
+    position: relative;
+    left: 40%;
+    height: 40%;
+    transform: translateX(-50%);
+}
+
+.CategoryNameBg {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    transform: translateX(-50%);
+    color: #D6D6D6;
+    font-size: 5rem;
+    white-space: nowrap;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+}
+
+.DivPlanList {
+    position: relative;
+}
+
+.divCategoryListContainer {
+    text-align: -webkit-center;
+    position: absolute;
+    overflow: auto;
+    max-width: 100%;
+    max-height: 500px;
+}
+
+.divCategoryList {
+    text-align: center;
+    background-color: rgba(140, 242, 102, 0.9);
+    border-radius: 1rem;
+    position: relative;
+    width: 24.3rem;
+    height: 20rem;
+}
+
+.divCategoryListFat {
+    text-align: center;
+    padding: 6rem;
+    background: #EDD091E5;
+    border-radius: 1rem;
+    position: relative;
+    width: 24.3rem;
+    height: 20rem;
+}
+
+.lbldtlPlanName {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 1.7rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    word-wrap: break-word;
+    max-width: 11rem;
+    text-align: left;
+}
+
+.lbldtlPlanDuration {
+    top: 40%;
+    position: absolute;
+    left: 10%;
+    font-size: 1.5rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.lbldtlActAmt {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+    .lbldtlActAmt::before {
+        content: '';
+        position: absolute;
+        margin-top: 10px;
+        width: 100%;
+        border-bottom: 1px solid red;
+        transform: rotate(-15deg);
+    }
+
+.lbldtlAmt {
+    position: absolute;
+    top: 20%;
+    font-size: 1.8rem;
+    left: 55%;
+    font-weight: 700;
+    font-family: 'Montserrat';
+}
+
+.lbldtlSavedAmt {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #000000;
+    position: absolute;
+    top: 30%;
+    left: 60%;
+}
+
+.divdtltrainingName {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.lbldtlTraningName {
+    background-color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    border-radius: 0.6rem;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.dtlbtnBuy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: black;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 2rem;
+    bottom: 5%;
+}
+
+
+
+.dtlCatCard {
+    background-color: #ffffff;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    padding: 2rem;
+    z-index: 1;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+
+
+.divresponsive {
+    overflow-y: auto;
+    max-height: 525px;
+    margin-bottom: 2em;
+}
+
+.DivdtlCategory {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
+
+.dtlClosebtn {
+    position: absolute;
+    right: 10%;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.lblSubDtlHead {
+    position: absolute;
+    left: 10%;
+    font-size: 2rem;
+    font-family: 'Manrope';
+    font-weight: 800;
+}
+
+.lblSubDtlHeadSub {
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: 1rem;
+    position: absolute;
+    left: 10%;
+}
+
+.lblCName {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: list-item;
+    text-align: left;
+    margin-bottom: -3rem;
+}
+
+.lblCAmt {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: black;
+    font-family: 'Manrope';
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.downArrow {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 5;
+    cursor: pointer;
+    width: 4rem;
+    transform: rotateX(180deg);
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.WrkVideo {
+    position: relative;
+    padding-left: 1rem;
+}
+.LockImgWorkout {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    z-index: 1;
+}
+.imgWorkOutDone {
+    width: 2rem;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    z-index: 1;
+}
+.VideoLock {
+    opacity: 0.5;
+    overflow: hidden;
+    pointer-events: none;
+}
+a {
+    color: #010408;
+    text-decoration: none;
+}
+    a:hover {
+        color: #010408;
+        text-decoration: none;
+    }
+.progressBar25 {
+    width: 50%;
+    height: 0.6rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 20%);
+}
+
+    .progressBar25::-webkit-progress-value {
+        background-color: #F85757;
+        border-radius: 10px;
+    }
+
+.progressBar50 {
+    width: 50%;
+    height: 0.6rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 20%);
+}
+
+    .progressBar50::-webkit-progress-value {
+        background-color: #fbc002;
+        border-radius: 10px;
+    }
+
+.progressBar75 {
+    width: 50%;
+    height: 0.6rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 20%);
+}
+
+    .progressBar75::-webkit-progress-value {
+        background-color: #f8a557;
+        border-radius: 10px;
+    }
+
+.progressBar100 {
+    width: 50%;
+    height: 0.6rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 20%);
+}
+
+    .progressBar100::-webkit-progress-value {
+        background-color: #42782E;
+        border-radius: 10px;
+    }
+
+
+.divSets {
+    display: flex;
+    text-align: center;
+}
+.setsCount {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #242424;
+}
+
+
+
+.reps {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    color: #242424;
+    display: block;
+    margin-top: 30%;
+    /* margin-left: -12%;*/
+    margin-inline-start: -2em;
+}
+
+
+
+.setsMarks {
+    padding: 1.5rem;
+    padding-top: 0rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.workOutSets {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #6D6D6D;
+    margin-top: 2%;
+}
+
+
+@media (min-width: 320px) and (max-width: 375px) {
+    .navbar.ud-navbar {
+        position: sticky;
+        width: 100%;
+        height: var(--navbar-height);
+        min-height: var(--navbar-height);
+        max-height: var(--navbar-height);
+        top: 0px;
+        background: rgba(237, 237, 237, 0.9);
+        backdrop-filter: blur(2px);
+        z-index: 5;
+    }
+
+    .NavDetails {
+        background-color: #E8ECF1;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        position: sticky;
+        top: 11%;
+        z-index: 3;
+    }
+
+    .divHeadDtl {
+        position: sticky;
+        top: 20.3%;
+        z-index: 3;
+        background-color: white;
+        padding: 2rem;
+    }
+    .lblNavList {
+        font-family: 'Manrope';
+        font-weight: 900;
+        font-size: 1.2rem;
+        color: #000000;
+        margin-right: 3rem;
+    }
+    .NavListSelect {
+        padding: 5px 0px;
+        border-bottom: 3px solid #2C60AF;
+        color: #2C60AF;
+    }
+    .lblNavList:hover {
+        color: #2C60AF;
+        padding: 5px 0px;
+        border-bottom: 3px solid #2C60AF;
+        color: #2C60AF;
+    }
+
+    .CategoryImg {
+        position: relative;
+        width: 40rem;
+        left: 45%;
+        height: 50%;
+        transform: translateX(-50%);
+    }
+    .CategoryNameBg {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        color: #D6D6D6;
+        font-size: 3.5rem;
+        white-space: nowrap;
+        font-weight: 800;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+    }
+    .divCategoryListContainer {
+        text-align: -webkit-center;
+        position: absolute;
+        overflow: auto;
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    .divSummary {
+        background: #F7F7F7;
+        border-radius: 0.5rem;
+        position: sticky;
+        top: 35%;
+        padding: 2rem;
+        margin-top: 10rem;
+    }
+}
+
+@media only screen and (min-width:374px) and (max-width:425px) {
+
+    .navbar.ud-navbar {
+        position: sticky;
+        width: 100%;
+        height: var(--navbar-height);
+        min-height: var(--navbar-height);
+        max-height: var(--navbar-height);
+        top: 0px;
+        background: rgba(237, 237, 237, 0.9);
+        backdrop-filter: blur(2px);
+        z-index: 2;
+    }
+
+    .NavDetails {
+        background-color: #E8ECF1;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        position: sticky;
+        top: 15%;
+        z-index: 3;
+    }
+
+    .divHeadDtl {
+        position: sticky;
+        top: 21.1%;
+        z-index: 3;
+        background-color: white;
+        padding: 2rem;
+    }
+
+    .NavListSelect {
+        padding: 5px 0px;
+        border-bottom: 3px solid #2C60AF;
+        color: #2C60AF;
+    }
+
+    .lblNavList:hover {
+        color: #2C60AF;
+        padding: 27px 0px;
+        border-bottom: 3px solid #2C60AF;
+        color: #2C60AF;
+    }
+
+    .CategoryImg {
+        position: relative;
+        width: 47rem;
+        left: 45%;
+        height: 50%;
+        transform: translateX(-50%);
+    }
+
+    .CategoryNameBg {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        color: #D6D6D6;
+        font-size: 3.5rem;
+        white-space: nowrap;
+        font-weight: 800;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+    }
+
+    .divCategoryListContainer {
+        text-align: -webkit-center;
+        position: absolute;
+        overflow: auto;
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    .divSummary {
+        background: #F7F7F7;
+        border-radius: 0.5rem;
+        position: sticky;
+        top: 35%;
+        padding: 2rem;
+        margin-top: 10rem;
+    }
+}
+@media only screen and (min-width:425px) and (max-width:512px) {
+
+    .navbar.ud-navbar {
+        position: sticky;
+        width: 100%;
+        height: var(--navbar-height);
+        min-height: var(--navbar-height);
+        max-height: var(--navbar-height);
+        top: 0px;
+        background: rgba(237, 237, 237, 0.9);
+        backdrop-filter: blur(2px);
+        z-index: 2;
+    }
+
+    .NavDetails {
+        background-color: #E8ECF1;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        position: sticky;
+        top: 11%;
+        z-index: 3;
+    }
+
+    .divHeadDtl {
+        position: sticky;
+        top: 17.1%;
+        z-index: 3;
+        background-color: white;
+        padding: 2rem;
+    }
+
+    .NavListSelect {
+        padding: 5px 0px;
+        border-bottom: 3px solid #2C60AF;
+        color: #2C60AF;
+    }
+
+    .lblNavList:hover {
+        color: #2C60AF;
+        padding: 27px 0px;
+        border-bottom: 3px solid #2C60AF;
+        color: #2C60AF;
+    }
+
+    .CategoryImg {
+        position: relative;
+        width: 47rem;
+        left: 45%;
+        height: 50%;
+        transform: translateX(-50%);
+    }
+
+    .CategoryNameBg {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        color: #D6D6D6;
+        font-size: 3.5rem;
+        white-space: nowrap;
+        font-weight: 800;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+    }
+
+    .divCategoryListContainer {
+        text-align: -webkit-center;
+        position: absolute;
+        overflow: auto;
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    .divSummary {
+        background: #F7F7F7;
+        border-radius: 0.5rem;
+        position: sticky;
+        top: 35%;
+        padding: 2rem;
+        margin-top: 10rem;
+    }
+}
+@media (min-width: 360px) and (max-width: 375px) {
+    .NavDetails {
+        background-color: #E8ECF1;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        position: sticky;
+        top: 11.5%;
+        z-index: 3;
+    }
+    .divHeadDtl {
+        position: sticky;
+        top: 20.5%;
+        z-index: 3;
+        background-color: white;
+        padding: 2rem;
+    }
+    .CategoryImg {
+        position: relative;
+        width: 45rem;
+        left: 45%;
+        height: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,200 @@
+﻿:root {
+    --ClassesBg: #F0F0F0;
+    --MainHeadingClr: #000;
+    --SubHeadingClr: #3E3D3D;
+    --ClassCardBg: #fff;
+}
+
+/*Entire Page*/
+.HomeClasses {
+    height: 100%;
+    background-color: var(--ClassesBg);
+    padding: 4rem 4.8rem 0rem 4.8rem;
+    margin-top: 4rem;
+    width: 100%;
+}
+/*Classes Card*/
+.classes-card {
+    /*position: relative;*/
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    min-height: 18rem;
+    /*background-color: var(--ClassCardBg);*/
+    border-radius: 1rem;
+    margin-bottom: 1.6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Classes-Container {
+    margin-block: 2.4rem;
+    justify-content: center;
+}
+/* Image In */
+.classes-card
+.CmnClassesImg {
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    /*height: 100%;*/
+    background-repeat: no-repeat;
+}
+
+
+
+/* Description */
+.classes-card
+.CmnClassesDesc_Out {
+    text-transform: capitalize;
+    display: flex;
+    font-weight: 600;
+    font-family: 'Manrope',sans-serif;
+    align-items: flex-start;
+    padding: 4.8rem 2rem;
+    height: 100%;
+    color: #000000;
+}
+
+    .classes-card
+    .CmnClassesDesc_Out
+    .CmnClassesDesctext_Out {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+/* 1800 */
+@media only screen and (min-width: 112.5em) {
+    .classes-card {
+        width: 100%;
+    }
+}
+/* 1200 */
+@media only screen and (max-width: 75em) {
+    .classes-card {
+        width: 100%;
+    }
+}
+/* 900 */
+@media only screen and (max-width: 56.25em) {
+    .classes-card {
+        width: 100%;
+    }
+
+    .ClassesCol-Container {
+        margin-inline: auto;
+    }
+}
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/*23 Feb 2023*/
+
+
+
+
+.lblStart {
+    cursor: none;
+    width: 130px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.lblAct {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 2rem;
+    color: #000000;
+}
+
+    .lblAct::before {
+        content: '';
+        position: absolute;
+        margin-top: 14px;
+        width: 10rem;
+        border-bottom: 2px solid red;
+        transform: rotate(-13deg);
+    }
+
+.lblDisp {
+    font-family: 'Manrope';
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 36px;
+    color: #000000;
+}
+
+
+
+.lblSave {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #272727;
+}
+/*.lblViewPlan {
+    cursor:pointer;
+    font-size: 13px;
+    color: #fff !important;
+    text-align: center;
+    padding: 5px;
+    background: #60C03E;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+}*/
+.owl-carousel {
+    position: relative;
+}
+
+    .owl-carousel .owl-prev,
+    .owl-carousel .owl-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .owl-carousel .owl-prev {
+        left: 0;
+    }
+
+    .owl-carousel .owl-next {
+        right: 0;
+    }
+
+.ClassesCommon:hover {
+    transform: scale(0.95);
+    transition: 0.2s;
+}
+
+    .ClassesCommon:hover .lblViewPlan {
+        color: var(--btnClr);
+        background-color: var(--btnMiddleBg);
+    }
+
+.lblViewPlan {
+    color: var(--btnClr);
+    background-color: var(--btnBg);
+    border-radius: 15px;
+    flex: 1;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}

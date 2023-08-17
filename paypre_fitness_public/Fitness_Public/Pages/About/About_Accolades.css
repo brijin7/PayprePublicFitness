@@ -1,0 +1,965 @@
+﻿
+
+.DivHead {
+    margin-left: 10rem;
+    margin-bottom: 2rem;
+}
+.lblAccHead {
+    font-size: 2rem;
+    color: black;
+    font-weight: 500;
+}
+.DivAccoladesbg {
+    background: linear-gradient(90deg, rgb(42 42 56) 0%, rgb(75 75 96) 35%, rgb(72 72 153) 100%);
+    position: relative;
+}
+.DivExp {
+    z-index: 1;
+    position: absolute;
+    top: 5%;
+    left: 20%;
+}
+
+.AccImg {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.lblExp1 {
+    color: white;
+    font-size: 5rem;
+    font-weight: 700;
+    font-style: italic;
+
+}
+.lblExpPlus {
+    position: absolute;
+    color: white;
+    font-size: 4.7rem;
+    font-style: italic;
+    font-weight: 800;
+}
+.lblExpYear {
+    position: absolute;
+    font-size: 1.3rem;
+    color: white;
+    margin-left: 3.2rem;
+    white-space: nowrap;
+    margin-top: 3rem;
+    font-style: italic;
+}
+.lblExp2 {
+    position: absolute;
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: -2rem;
+    margin-left: -1rem;
+}
+.divTrans {
+    z-index: 1;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+}
+.lblTrans1 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+}
+.lblTrans2 {
+    color: white;
+    margin-left: 7rem;
+    font-weight: 700;
+    font-style: italic;
+}
+.lblTrans3 {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    margin-left: 0.3rem;
+    margin-top: -0.4rem;
+    font-weight: 700;
+    font-style: italic;
+}
+.DivKA {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+.AwdImg1 {
+    width: 6rem;
+}
+.lblKA1 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+}
+.lblKA2 {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 7rem;
+    margin-top: -4rem;
+}
+
+.DivInt {
+    z-index: 1;
+    position: absolute;
+    top: 75%;
+    left: 20%;
+}
+
+.lblInt1 {
+    font-size: 3rem;
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+}
+.lblInt2 {
+    font-size: 1.2rem;
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+    position: absolute;
+    margin-top: -5rem;
+    margin-left: 7rem;
+}
+
+.DivTN {
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 60%;
+}
+.lblTN1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+}
+.lblTN2 {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+    margin-top: 6rem;
+    margin-left: -23.5rem;
+}
+
+.DivInt2 {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 55%;
+}
+.lblInt21 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+}
+
+.lblInt22 {
+    margin-left: -40rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+    position: absolute;
+    margin-top: 4rem;
+}
+
+.lblInt23 {
+    margin-left: -1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+    position: absolute;
+    margin-top: 1rem;
+}
+
+.DivInt3 {
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    left: 75%;
+}
+.AwdImg2 {
+    width: 6rem;
+    margin-left: 13rem;
+    margin-top: 1rem;
+}
+.lblInt31 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+    margin-top: 10rem;
+    position: absolute;
+}
+.lblInt32 {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    margin-left: -19rem;
+    margin-top: 11rem;
+    font-style: italic;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.lblInt33 {
+    color: white;
+    margin-top: 14rem;
+    position: absolute;
+    font-style: italic;
+    margin-left: -4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+@media (min-width: 319px) and (max-width: 320px) {
+    .lblExp1 {
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblExpPlus {
+        position: absolute;
+        color: white;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 800;
+    }
+
+    .lblExpYear {
+        position: absolute;
+        font-size: 0.9rem;
+        color: white;
+        margin-left: 1.2rem;
+        white-space: nowrap;
+        margin-top: 0.8rem;
+        font-style: italic;
+    }
+
+    .lblExp2 {
+        position: absolute;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        font-style: italic;
+        margin-top: -1rem;
+        margin-left: -0.7rem;
+    }
+
+    .lblTrans1 {
+        font-size: 0.8rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblTrans2 {
+        color: white;
+        margin-left: 0.5rem;
+        font-weight: 700;
+        font-style: italic;
+        position: absolute;
+        margin-top: -0.7rem;
+        font-size: 1rem;
+    }
+
+    .lblTrans3 {
+        color: white;
+        font-size: 1.3rem;
+        position: absolute;
+        margin-left: 2.8rem;
+        margin-top: -0.8rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .AwdImg1 {
+        width: 2rem;
+    }
+    .lblKA1 {
+        font-size: 0.8rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblKA2 {
+        position: absolute;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+        margin-left: 2.2rem;
+        margin-top: -1.6rem;
+    }
+    .lblInt1 {
+        font-size: 0.8rem;
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    .lblInt2 {
+        font-size: 0.5rem;
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+        position: absolute;
+        margin-top: -1.3rem;
+        margin-left: 2.3rem;
+    }
+
+    .lblTN1 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        font-style: italic;
+        color: white;
+    }
+
+    .lblTN2 {
+        position: absolute;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        margin-top: 2rem;
+        margin-left: -6.5rem;
+    }
+    .lblInt21 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+    }
+
+    .lblInt22 {
+        margin-left: -10.6rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        position: absolute;
+        margin-top: 1.9rem;
+    }
+
+    .lblInt23 {
+        margin-left: 0rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        position: absolute;
+        margin-top: 0.2rem;
+    }
+
+    .lblInt31 {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        margin-top: 3rem;
+        position: absolute;
+        margin-left: -3.2rem;
+    }
+
+    .AwdImg2 {
+        width: 2rem;
+        margin-left: 4rem;
+        margin-top: 2rem;
+    }
+
+    .lblInt32 {
+        position: absolute;
+        font-size: 0.6rem;
+        color: white;
+        margin-left: -9.6rem;
+        margin-top: 4rem;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .lblInt33 {
+        color: white;
+        margin-top: 4.7rem;
+        position: absolute;
+        font-style: italic;
+        margin-left: -6rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+    }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+    .lblExp1 {
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblExpPlus {
+        position: absolute;
+        color: white;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 800;
+    }
+
+    .lblExpYear {
+        position: absolute;
+        font-size: 0.9rem;
+        color: white;
+        margin-left: 1.2rem;
+        white-space: nowrap;
+        margin-top: 0.8rem;
+        font-style: italic;
+    }
+
+    .lblExp2 {
+        position: absolute;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        font-style: italic;
+        margin-top: -1rem;
+        margin-left: -0.7rem;
+    }
+
+    .lblTrans1 {
+        font-size: 0.8rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblTrans2 {
+        color: white;
+        margin-left: 0.5rem;
+        font-weight: 700;
+        font-style: italic;
+        position: absolute;
+        margin-top: -0.7rem;
+        font-size: 1rem;
+    }
+
+    .lblTrans3 {
+        color: white;
+        font-size: 1.3rem;
+        position: absolute;
+        margin-left: 2.8rem;
+        margin-top: -0.8rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .AwdImg1 {
+        width: 2rem;
+    }
+
+    .lblKA1 {
+        font-size: 0.8rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblKA2 {
+        position: absolute;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+        margin-left: 2.2rem;
+        margin-top: -1.6rem;
+    }
+
+    .lblInt1 {
+        font-size: 0.8rem;
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    .lblInt2 {
+        font-size: 0.5rem;
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+        position: absolute;
+        margin-top: -1.3rem;
+        margin-left: 2.3rem;
+    }
+
+    .lblTN1 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        font-style: italic;
+        color: white;
+    }
+
+    .lblTN2 {
+        position: absolute;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        margin-top: 2rem;
+        margin-left: -6.5rem;
+    }
+
+    .lblInt21 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+    }
+
+    .lblInt22 {
+        margin-left: -10.6rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        position: absolute;
+        margin-top: 1.9rem;
+    }
+
+    .lblInt23 {
+        margin-left: 0rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        position: absolute;
+        margin-top: 0.2rem;
+    }
+
+    .lblInt31 {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        margin-top: 3rem;
+        position: absolute;
+        margin-left: -3.2rem;
+    }
+
+    .AwdImg2 {
+        width: 2rem;
+        margin-left: 4rem;
+        margin-top: 2rem;
+    }
+
+    .lblInt32 {
+        position: absolute;
+        font-size: 0.6rem;
+        color: white;
+        margin-left: -9.6rem;
+        margin-top: 4rem;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .lblInt33 {
+        color: white;
+        margin-top: 4.7rem;
+        position: absolute;
+        font-style: italic;
+        margin-left: -6rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+    }
+}
+@media (min-width: 376px) and (max-width: 425px){
+    .lblExp1 {
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblExpPlus {
+        position: absolute;
+        color: white;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 800;
+    }
+
+    .lblExpYear {
+        position: absolute;
+        font-size: 0.9rem;
+        color: white;
+        margin-left: 1.2rem;
+        white-space: nowrap;
+        margin-top: 0.8rem;
+        font-style: italic;
+    }
+
+    .lblExp2 {
+        position: absolute;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        font-style: italic;
+        margin-top: -1rem;
+        margin-left: -0.7rem;
+    }
+
+    .lblTrans1 {
+        font-size: 0.8rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblTrans2 {
+        color: white;
+        margin-left: 0.5rem;
+        font-weight: 700;
+        font-style: italic;
+        position: absolute;
+        margin-top: -0.7rem;
+        font-size: 1rem;
+    }
+
+    .lblTrans3 {
+        color: white;
+        font-size: 1.3rem;
+        position: absolute;
+        margin-left: 2.8rem;
+        margin-top: -0.8rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .AwdImg1 {
+        width: 2rem;
+    }
+
+    .lblKA1 {
+        font-size: 0.8rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblKA2 {
+        position: absolute;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+        margin-left: 2.2rem;
+        margin-top: -1.6rem;
+    }
+
+    .lblInt1 {
+        font-size: 0.8rem;
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    .lblInt2 {
+        font-size: 0.5rem;
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+        position: absolute;
+        margin-top: -1.3rem;
+        margin-left: 2.3rem;
+    }
+
+    .lblTN1 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        font-style: italic;
+        color: white;
+    }
+
+    .lblTN2 {
+        position: absolute;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        margin-top: 2rem;
+        margin-left: -6.5rem;
+    }
+
+    .lblInt21 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+    }
+
+    .lblInt22 {
+        margin-left: -10.6rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        position: absolute;
+        margin-top: 1.9rem;
+    }
+
+    .lblInt23 {
+        margin-left: 0rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        position: absolute;
+        margin-top: 0.2rem;
+    }
+
+    .lblInt31 {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        margin-top: 3rem;
+        position: absolute;
+        margin-left: -3.2rem;
+    }
+
+    .AwdImg2 {
+        width: 2rem;
+        margin-left: 4rem;
+        margin-top: 2rem;
+    }
+
+    .lblInt32 {
+        position: absolute;
+        font-size: 0.6rem;
+        color: white;
+        margin-left: -9.6rem;
+        margin-top: 4rem;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .lblInt33 {
+        color: white;
+        margin-top: 4.7rem;
+        position: absolute;
+        font-style: italic;
+        margin-left: -6rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 600px){
+    .lblExp1 {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblExpPlus {
+        position: absolute;
+        color: white;
+        font-size: 2.4rem;
+        font-style: italic;
+        font-weight: 800;
+    }
+
+    .lblExpYear {
+        position: absolute;
+        font-size: 1rem;
+        color: white;
+        margin-left: 1.7rem;
+        white-space: nowrap;
+        margin-top: 1.3rem;
+        font-style: italic;
+    }
+
+    .lblExp2 {
+        position: absolute;
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        font-style: italic;
+        margin-top: -1rem;
+        margin-left: -0.7rem;
+    }
+
+    .lblTrans1 {
+        font-size: 2rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblTrans2 {
+        color: white;
+        margin-left: 0.5rem;
+        font-weight: 700;
+        font-style: italic;
+        position: absolute;
+        margin-top: -0.7rem;
+        font-size: 1.8rem;
+    }
+
+    .lblTrans3 {
+        color: white;
+        font-size: 2rem;
+        position: absolute;
+        margin-left: 4.8rem;
+        margin-top: -0.8rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .AwdImg1 {
+        width: 3rem;
+    }
+
+    .lblKA1 {
+        font-size: 2rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .lblKA2 {
+        position: absolute;
+        font-size: 2rem;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+        margin-left: 3.2rem;
+        margin-top: -2.5rem;
+    }
+
+    .lblInt1 {
+        font-size: 1.8rem;
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    .lblInt2 {
+        font-size: 1rem;
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+        position: absolute;
+        margin-top: -1.3rem;
+        margin-left: 3.3rem;
+    }
+
+    .lblTN1 {
+        font-size: 2rem;
+        font-weight: 700;
+        font-style: italic;
+        color: white;
+    }
+
+    .lblTN2 {
+        position: absolute;
+        font-size: 2rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        margin-top: 3rem;
+        margin-left: -6.5rem;
+    }
+
+    .lblInt21 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+    }
+
+    .lblInt22 {
+        margin-left: -24rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        position: absolute;
+        margin-top: 1.9rem;
+    }
+
+    .lblInt23 {
+        margin-left: 0rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        position: absolute;
+        margin-top: 0.2rem;
+    }
+
+    .lblInt31 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        font-style: italic;
+        margin-top: 2.6rem;
+        position: absolute;
+        margin-left: -6.2rem;
+    }
+
+    .AwdImg2 {
+        width: 3rem;
+        margin-left: 8rem;
+        margin-top: 1rem;
+    }
+
+    .lblInt32 {
+        position: absolute;
+        font-size: 1rem;
+        color: white;
+        margin-left: -15.6rem;
+        margin-top: 4.3rem;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .lblInt33 {
+        color: white;
+        margin-top: 5.2rem;
+        position: absolute;
+        font-style: italic;
+        margin-left: -9.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .DivKA {
+        z-index: 1;
+        position: absolute;
+        top: 55%;
+        left: 8%;
+    }
+}
+@media (min-width: 319px) and (max-width: 320px){
+
+}

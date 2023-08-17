@@ -1,0 +1,131 @@
+﻿
+
+body {
+    background: #f6f7fb;
+}
+
+.fa-solid, .fas {
+    font-weight: 900;
+    color: white;
+}
+
+.divWelcome {
+    position: relative;
+    margin: 1rem;
+}
+
+.lblWelcome {
+    margin-left: 7rem;
+    font-family: 'Manrope';
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.lblUserName {
+    font-family: 'Manrope';
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.UserDtlContainer {
+    margin: 7rem;
+    margin-top: 3rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    padding: 2rem;
+}
+
+.lblPlanDtlHead {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.divPlandtl {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.lblPlanDtl {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+.vl {
+    border-left: 2px solid #606060;
+    height: 500px;
+}
+.divlive {
+    text-align:center;
+}
+
+.demovid {
+    width: 100%;
+    border-radius: 1rem;
+    height: 30rem;
+}
+
+.lblVideoHead {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom:2rem;
+}
+
+
+.divWorkOut {
+    margin-top: 3rem;
+}
+.divCol {
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.Colhead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ff7ea5;
+    padding: 8px 20px;
+    border-radius: 13px;
+}
+
+.Colbody {
+    padding: 15px 23px;
+    height: 10rem;
+}
+.lblCol {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.lbltotalCal {
+    font-size: 1.3rem;
+    color: #9b9aba;
+    font-weight: 600;
+}
+.Coltotal {
+    background: #20deff;
+}
+.water {
+    background: #c388f6 ;
+}
+.workout {
+    background: #748ffc
+}
+
+.btnWorkout {
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    background: #748ffc;
+    color: white;
+    text-decoration:none;
+}
+    .btnWorkout:hover {
+        color: black;
+    }

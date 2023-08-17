@@ -1,0 +1,46 @@
+﻿:root {
+    --ClassesMainHeadingClr: #000;
+    --ClassesSubHeadingClr: #3E3D3D;
+    --SubscriptionMainHeading: #fff;
+    --SubscriptionSubHeading: #fff;
+}
+
+/*Classes Page Heading*/
+.Heading-Container {
+    margin: 7.4rem 0 4.8rem 0;
+    text-transform: capitalize;
+}
+
+    .Heading-Container
+    .MainHeading {
+        font-family: 'Manrope',sans-serif;
+        color: var(--MainHeadingClr);
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+
+    .Heading-Container.HdgClasses
+    .MainHeading {
+        color: var(--ClassesMainHeadingClr);
+    }
+
+    .Heading-Container.HdgClasses
+    .SubHeading {
+        color: var(--ClassesSubHeadingClr);
+    }
+
+    .Heading-Container.HdgSubscription
+    .MainHeading {
+        color: var(--ClassesMainHeadingClr);
+    }
+
+    .Heading-Container.HdgSubscription
+    .SubHeading {
+        color: var(--ClassesSubHeadingClr);
+    }
+
+
+    .Heading-Container.HdgJustAbout
+    .MainHeading {
+        color: var(--ClassesMainHeadingClr);
+    }

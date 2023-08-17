@@ -1,0 +1,186 @@
+﻿.Testimonials {
+    padding: 8rem 4.8rem 4.8rem 4.8rem;
+    position: relative;
+}
+
+.Carousel-Container {
+    margin-block: 6.4rem;
+}
+
+.ImgTestimonials {
+    width: 90% !important;
+    margin: auto;
+    max-height: 30rem;
+    cursor: pointer;
+}
+
+.ImgTestimonials_Scale {
+    transform: scale(0.8);
+}
+
+.btnRightLeft {
+    width: 3.6rem;
+    height: auto;
+}
+
+
+
+/*Carousel */
+/*.Testimonials
+.owl-carousel
+.owl-nav {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+    margin-block: 1rem;
+    margin-right: 1.6rem;
+}
+
+
+    .Testimonials
+    .owl-carousel
+    .owl-nav
+    .owl-prev,
+    .Testimonials
+    .owl-carousel
+    .owl-nav
+    .owl-next {*/
+      /*  position: relative;*/
+        /*width: 3.2rem;
+    }
+
+        .Testimonials
+        .owl-carousel
+        .owl-nav
+        .owl-prev span,
+        .Testimonials
+        .owl-carousel
+        .owl-nav
+        .owl-next span {
+            font-size: 2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }*/
+
+.Overlay-Testimonials, .Testimonials-SelecteImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Overlay-Testimonials {
+    background-color: rgb(7 7 7 / 40%);
+    z-index: 3;
+}
+
+.Testimonials-SelecteImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.SelectedTransFormation {
+    z-index: 4;
+    width: 40%;
+    height: auto;
+}
+
+.btnWhiteLeftRight {
+    z-index: 4;
+    width: 3.6rem;
+    height: auto;
+    cursor: pointer;
+}
+
+@media(max-width:56.25em) {
+
+    .SelectedTransFormation {
+        width: 40%;
+    }
+}
+
+@media(max-width:37.5em) {
+
+    .SelectedTransFormation {
+        width: 70%;
+    }
+}
+
+/*font-family: 'Manrope', sans-serif;
+font-family: 'Montserrat', sans-serif;
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+
+.ActualAmount {
+    margin-bottom: -10px;
+}
+
+
+.Actual-Amount {
+    color: #1e1e1e;
+    position: relative;
+    display: inline-block;
+}
+
+    .Actual-Amount::before {
+        content: '';
+        position: absolute;
+        margin-top: 10px;
+        width: 100%;
+        border-bottom: 1px solid red;
+        transform: rotate(-15deg);
+    }
+
+.Saved-Amount {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #272727;
+}
+
+.Desc_1 {
+    font-weight: 600;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+    .owl-carousel .owl-prev,
+    .owl-carousel .owl-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .owl-carousel .owl-prev {
+        left: 0;
+    }
+
+    .owl-carousel .owl-next {
+        right: 0;
+    }
+
+.Days {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.liBnfts {
+    text-align-last: start;
+}
+

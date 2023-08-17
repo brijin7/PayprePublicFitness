@@ -1,0 +1,413 @@
+﻿.DisplyCard {
+    position: fixed;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: #000000eb;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.DisplyCardPostion {
+    border-width: 0px;
+    position: fixed;
+    width: 70%;
+    height: auto;
+    padding: 0px 50px 0px 50px;
+    background-color: #ffffff;
+    font-size: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 11%;
+    border-radius: 25px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    bottom: 0%;
+}
+
+.divLogo {
+    margin-bottom: 3rem;
+    position: sticky;
+    top: 1rem;
+    background-color: white;
+    border-radius: 2rem;
+    z-index: 2;
+}
+
+.logoImg {
+    width: 6rem;
+}
+
+.TSHead {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.FAQCloseBtn {
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    top: -1rem;
+    cursor: pointer;
+    right: -2rem;
+}
+
+.UserHead {
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 500;
+}
+
+.UserText {
+    font-size: 1rem;
+    color: black;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.imgTC {
+    width: 25rem;
+    margin-left: 4.4rem;
+}
+
+.divresponsive {
+    overflow-y: auto;
+    max-height: 525px;
+    margin-bottom: 2em;
+}
+/*Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #757575;
+    border-radius: 10px;
+}
+
+
+.faq-container {
+    padding: 0rem;
+    height: 343px;
+    overflow: auto;
+    width: 592px;
+}
+
+.faq {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.question {
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+.answer {
+    display: none;
+}
+
+.question.active + .answer {
+    display: block;
+
+}
+
+.FAQdownarrow {
+    width: 1.2rem;
+    position: fixed;
+    left: 60%;
+}
+
+.FAQCloseBtnFAQ {
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    top: -1rem;
+    cursor: pointer;
+    right: -2rem;
+}
+
+.imgFAQ {
+    width: 33rem;
+    margin-top: 3rem;
+    margin-left: -1.4rem;
+}
+
+@media (min-width: 319px) and (max-width: 320px) {
+
+    .FAQCloseBtn {
+        font-size: 1.1rem;
+        margin-left: 6rem !important;
+        color: black;
+        font-weight: 500;
+    }
+
+    .DisplyCardPostion {
+        border-width: 0px;
+        position: fixed;
+        width: 90%;
+        height: auto;
+        padding: 0px 15px 0px 15px;
+        background-color: #ffffff;
+        font-size: 40px;
+        left: 50%;
+        transform: translateX(-47%);
+        top: 10%;
+        border-radius: 25px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        bottom: 0%;
+    }
+
+    .TSHead {
+        font-size: 1.5rem !important;
+        font-weight: 600;
+    }
+
+    .imgTC {
+        width: 29rem !important;
+        margin-left: -14rem !important;
+        position: absolute;
+        top: 15%;
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    .FAQdownarrow {
+        width: 1.2rem;
+        position: fixed;
+        left: 90%;
+    }
+
+    .faq {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+
+    .imgFAQ {
+        width: 40rem !important;
+        margin-left: -19rem !important;
+        position: absolute;
+        top: 30%;
+        opacity: 0.2;
+        z-index: -1;
+    }
+    .FAQCloseBtnFAQ {
+        font-size: 1.1rem;
+        margin-left: 18rem;
+        color: black;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+
+    .FAQCloseBtn {
+        font-size: 1.1rem;
+        margin-left: 11rem !important;
+        color: black;
+        font-weight: 500;
+    }
+
+    .TSHead {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .DisplyCardPostion {
+        border-width: 0px;
+        position: fixed;
+        width: 95%;
+        height: auto;
+        padding: 0px 10px 0px 10px;
+        background-color: #ffffff;
+        font-size: 40px;
+        left: 50%;
+        transform: translateX(-48%);
+        top: 11%;
+        border-radius: 25px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        bottom: 0%;
+    }
+
+    .imgTC {
+        width: 34rem !important;
+        margin-left: -17rem !important;
+        position: absolute;
+        top: 18% !important;
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    .FAQdownarrow {
+        width: 1.2rem;
+        position: fixed;
+        left: 90%;
+    }
+
+    .faq {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+    .imgFAQ {
+        width: 40rem !important;
+        margin-left: -19rem !important;
+        position: absolute;
+        top: 30%;
+        opacity: 0.2;
+        z-index: -1;
+    }
+    .FAQCloseBtnFAQ {
+        font-size: 1.1rem;
+        margin-left: 26rem;
+        color: black;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .TSHead {
+        font-size: 2.1rem;
+        font-weight: 600;
+    }
+
+    .FAQCloseBtn {
+        font-size: 1.1rem;
+        margin-left: 16rem;
+        color: black;
+        font-weight: 500;
+    }
+
+    .DisplyCardPostion {
+        border-width: 0px;
+        position: fixed;
+        width: 95%;
+        height: auto;
+        padding: 0px 10px 0px 10px;
+        background-color: #ffffff;
+        font-size: 40px;
+        left: 50%;
+        transform: translateX(-48%);
+        top: 11%;
+        border-radius: 25px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        bottom: 0%;
+    }
+
+    .imgTC {
+        width: 40rem;
+        margin-left: -19rem;
+        position: absolute;
+        top: 18%;
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    .FAQdownarrow {
+        width: 1.2rem;
+        position: fixed;
+        left: 90%;
+    }
+
+    .faq {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+    .imgFAQ {
+        width: 40rem !important;
+        margin-left: -19rem !important;
+        position: absolute;
+        top: 30%;
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    .FAQCloseBtnFAQ {
+        font-size: 1.1rem;
+        margin-left: 31rem;
+        color: black;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 600px){
+
+    .DisplyCardPostion {
+        border-width: 0px;
+        position: fixed;
+        width: 90%;
+        height: auto;
+        padding: 0px 50px 0px 50px;
+        background-color: #ffffff;
+        font-size: 40px;
+        left: 50%;
+        transform: translateX(-48%);
+        top: 11%;
+        border-radius: 25px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        bottom: 0%;
+    }
+    .logoImg {
+        width: 4rem;
+    }
+    .TSHead {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .imgTC {
+        width: 35rem;
+        margin-left: -18rem;
+        position: absolute;
+        top: 15%;
+        opacity: 0.2;
+        z-index: -1;
+    }
+    .FAQCloseBtn {
+        font-size: 1.1rem;
+        margin-left: 12rem;
+        color: black;
+        font-weight: 500;
+    }
+
+    .FAQCloseBtnFAQ {
+        font-size: 2rem;
+        color: black;
+        font-weight: 700;
+        position: absolute;
+        top: -1rem;
+        cursor: pointer;
+        right: -2rem;
+    }
+    .FAQdownarrow {
+        width: 1.2rem;
+        position: fixed;
+        left: 85%;
+    }
+    .faq {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+    .imgFAQ {
+        width: 42rem !important;
+        margin-left: -20rem !important;
+        position: absolute;
+        top: 15%;
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+  
+
+
+}
+

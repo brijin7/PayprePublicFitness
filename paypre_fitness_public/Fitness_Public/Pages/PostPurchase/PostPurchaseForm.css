@@ -1,0 +1,122 @@
+﻿
+.mealContainer {
+    padding: 3rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding-bottom: 0;
+    background: white;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.VideoWork {
+    width: 35rem;
+    border-radius: 1rem;
+}
+
+.NewClass {
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+.DivNewClass {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+    width: 98%;
+    position: relative;
+}
+.DivClass {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+    width: 36rem;
+    position: relative;
+}
+.DivBreakFast {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+    width: 40rem;
+    position: relative;
+}
+.DivActivity{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+    width: 25rem;
+    position: relative;
+}
+ .weekly-header {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(144,150,159,.2);
+    align-items: center;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight:500;
+    line-height: 14px;
+    color: #000;
+    cursor: pointer;
+}
+.icon-sec {
+    padding-top: 7px;
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.25);
+    position: relative;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+}
+.item-name {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-subname {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #9c9eb9;
+    margin-bottom: 0;
+    
+}
+.hrd {
+    color: #a9b1b1;
+}
+.blink {
+    animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.lblHead{
+    color:red;
+ }

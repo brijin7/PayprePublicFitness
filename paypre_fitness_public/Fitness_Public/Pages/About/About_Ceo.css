@@ -1,0 +1,615 @@
+﻿
+body {
+    scroll-behavior: smooth;
+}
+:root {
+    --ClassesBg: #F0F0F0;
+    --MainHeadingClr: #000;
+    --SubHeadingClr: #3E3D3D;
+    --ClassCardBg: #fff;
+}
+
+/*Entire Page*/
+.CeoImg {
+    width: 85%;
+}
+
+.CeoName {
+    position: absolute;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 143.683px;
+    line-height: 213px;
+    letter-spacing: -0.03em;
+    background: linear-gradient(180deg, #4076DC 29.69%, #86B0FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.CeoFullName {
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16.3854px;
+    line-height: 20px;
+    letter-spacing: 1.6em;
+    color: #2E2E2E;
+}
+
+.CeoOf {
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 31.8297px;
+    line-height: 39px;
+    color: #000000;
+}
+
+.CeoEdu, .CeoEdunl {
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24.9043px;
+    line-height: 30px;
+    color: #070707;
+}
+
+.CeoHr {
+    position: absolute;
+    font-weight: 600;
+}
+
+.CeoSign {
+    position: absolute;
+}
+
+.downArrow {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 5;
+    cursor: pointer;
+    width: 4rem;
+    transform: rotateX(180deg);
+    background-color: white;
+    border-radius: 2rem;
+    
+}
+
+.wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+    .marquee p {
+        font-size: 30px;
+        font-family: 'Manrope-medium-thin';
+        display: inline-block;
+    }
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+/*Media Query for Width 2560px */
+    @media only screen and (max-width: 2561px) {
+
+        .CeoName {
+            left: 60%;
+            font-size: 230px;
+            line-height: 150%;
+        }
+
+        .CeoFullName {
+            left: 60.5%;
+            font-size: 16.3854px;
+            line-height: 20px;
+        }
+
+        .CeoOf {
+            left: 60.3%;
+            font-size: 31.8297px;
+            line-height: 39px;
+        }
+
+        .CeoEdu {
+            left: 60.5%;
+            font-size: 24.9043px;
+            line-height: 30px;
+        }
+
+        .CeoEdunl {
+            left: 60.5%;
+            font-size: 24.9043px;
+            line-height: 30px;
+        }
+
+        .CeoHr {
+            left: 60.5%;
+        }
+
+        .CeoSign {
+            left: 60.5%;
+        }
+    }
+    /*Media Query for Width 2560px */
+    @media only screen and (min-width: 1441px) and (max-width: 2560px) {
+
+        .CeoName {
+            margin-top: 25rem;
+            left: 50%;
+            font-size: 201px;
+            line-height: 130%;
+        }
+
+        .CeoFullName {
+            margin-top: 50rem;
+            left: 50.5%;
+            font-size: 23.3px;
+            line-height: 20px;
+        }
+
+        .CeoOf {
+            margin-top: 53rem;
+            left: 50.3%;
+            font-size: 44.8297px;
+            line-height: 40px;
+        }
+
+        .CeoEdu {
+            margin-top: 58rem;
+            left: 50.5%;
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        .CeoEdunl {
+            margin-top: 62rem;
+            left: 50.5%;
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        .CeoHr {
+            margin-top: 66rem;
+            left: 50.5%;
+            width: 17%;
+        }
+
+        .CeoSign {
+            margin-top: 68rem;
+            left: 50.5%;
+            width: 10%;
+        }
+
+        .marquee p {
+            font-size: 26px;
+        }
+    }
+    /*Media Query for Width 1400 px */
+    @media only screen and (min-width: 1241px) and (max-width:1440px ) {
+
+        .CeoName {
+            margin-top: 14rem;
+            left: 50%;
+            font-size: 120px;
+            line-height: 150px;
+        }
+
+        .CeoFullName {
+            margin-top: 28rem;
+            left: 50.5%;
+            font-size: 14px;
+            line-height: 15px;
+        }
+
+        .CeoOf {
+            margin-top: 30rem;
+            left: 50.3%;
+            font-size: 27px;
+            line-height: 28px;
+        }
+
+        .CeoEdu {
+            margin-top: 33rem;
+            left: 50.5%;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .CeoEdunl {
+            margin-top: 36rem;
+            left: 50.5%;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .CeoHr {
+            margin-top: 39rem;
+            left: 50.5%;
+            width: 20%;
+        }
+
+        .CeoSign {
+            margin-top: 41rem;
+            left: 50.5%;
+            width: 12%;
+        }
+
+        .marquee p {
+            font-size: 24px;
+        }
+    }
+    /*Media Query for Width 1240px */
+    @media only screen and (min-width: 1025px) and (max-width:1240px ) {
+
+        .CeoName {
+            top: 24%;
+            left: 50%;
+            font-size: 114px;
+            line-height: 160px;
+        }
+
+        .CeoFullName {
+            top: 52%;
+            left: 50.5%;
+            font-size: 13.3px;
+            line-height: 14px;
+        }
+
+        .CeoOf {
+            top: 56%;
+            left: 50.3%;
+            font-size: 25.8px;
+            line-height: 28px;
+        }
+
+        .CeoEdu {
+            top: 64%;
+            left: 50.5%;
+            font-size: 20px;
+            line-height: 22px;
+        }
+
+        .CeoEdunl {
+            top: 70%;
+            left: 50.5%;
+            font-size: 20px;
+            line-height: 22px;
+        }
+
+        .CeoHr {
+            top: 78%;
+            left: 50.5%;
+            width: 20%;
+        }
+
+        .CeoSign {
+            top: 81%;
+            left: 50.5%;
+            width: 12%;
+        }
+
+        .marquee p {
+            font-size: 22px;
+        }
+    }
+    /*Media Query for Width 1024px */
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+        .CeoName {
+            margin-top: 8rem;
+            left: 50%;
+            font-size: 85px;
+            line-height: 120px;
+        }
+
+        .CeoFullName {
+            margin-top: 18rem;
+            left: 50.5%;
+            font-size: 10px;
+            line-height: 16px;
+        }
+
+        .CeoOf {
+            margin-top: 19rem;
+            left: 50.3%;
+            font-size: 19.3825px;
+            line-height: 38px;
+        }
+
+        .CeoEdu {
+            margin-top: 22rem;
+            left: 50.5%;
+            font-size: 15px;
+            line-height: 28px;
+        }
+
+        .CeoEdunl {
+            margin-top: 24rem;
+            left: 50.5%;
+            font-size: 15px;
+            line-height: 28px;
+        }
+
+        .CeoHr {
+            margin-top: 27rem;
+            left: 50.5%;
+            width: 18%;
+        }
+
+        .CeoSign {
+            margin-top: 29rem;
+            left: 50.5%;
+            width: 12%;
+        }
+
+        .marquee p {
+            font-size: 18px;
+        }
+    }
+    /*Media Query for Width 768px */
+    @media only screen and (min-width: 426px) and (max-width: 768px) {
+        .CeoImg {
+            width: 85%;
+        }
+
+        .CeoName {
+            margin-top: 2rem;
+            left: 50%;
+            font-size: 65px;
+            line-height: 70px;
+        }
+
+        .CeoFullName {
+            margin-top: 11rem;
+            left: 50.5%;
+            font-size: 7.6px;
+            line-height: 12px;
+        }
+
+        .CeoOf {
+            margin-top: 12rem;
+            left: 50.3%;
+            font-size: 15px;
+            line-height: 24px;
+        }
+
+        .CeoEdu {
+            margin-top: 14rem;
+            left: 50.5%;
+            font-size: 10px;
+            line-height: 20px;
+        }
+
+        .CeoEdunl {
+            margin-top: 18rem;
+            left: 50.5%;
+            font-size: 10px;
+            line-height: 20px;
+        }
+
+        .CeoHr {
+            margin-top: 20rem;
+            left: 50.5%;
+            width: 18%;
+        }
+
+        .CeoSign {
+            margin-top: 21rem;
+            left: 50.5%;
+            width: 10%;
+        }
+
+        .marquee p {
+            font-size: 16px;
+        }
+    }
+    /*Media Query for Width 425px */
+    @media only screen and (min-width: 374px) and (max-width: 425px) {
+        .CeoImg {
+            width: 85%;
+        }
+
+        .CeoName {
+            margin-top: 4rem;
+            left: 50%;
+            font-size: 35px;
+            line-height: 35px;
+        }
+
+        .CeoFullName {
+            margin-top: 8.3rem;
+            left: 50.5%;
+            font-size: 4.1px;
+            line-height: 6px;
+        }
+
+        .CeoOf {
+            margin-top: 9rem;
+            left: 50.3%;
+            font-size: 8px;
+            line-height: 12px;
+        }
+
+        .CeoEdu {
+            margin-top: 10.2rem;
+            left: 50.5%;
+            font-size: 7px;
+            line-height: 10px;
+        }
+
+        .CeoEdunl {
+            margin-top: 11.2rem;
+            left: 50.5%;
+            font-size: 7px;
+            line-height: 10px;
+        }
+
+        .CeoHr {
+            margin-top: 12.5rem;
+            left: 50.5%;
+            width: 18%;
+        }
+
+        .CeoSign {
+            margin-top: 13rem;
+            left: 50.5%;
+            width: 10%;
+        }
+
+        .marquee {
+            animation: marquee 15s linear infinite;
+        }
+
+            .marquee p {
+                font-size: 14px;
+            }
+    }
+    /*Media Query for Width 375px */
+    @media only screen and (min-width: 321px) and (max-width: 375px) {
+        .CeoImg {
+            width: 85%;
+        }
+
+        .CeoName {
+            margin-top: 3rem;
+            left: 50%;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        .CeoFullName {
+            margin-top: 7rem;
+            left: 50.5%;
+            font-size: 3.5px;
+            line-height: 5px;
+        }
+
+        .CeoOf {
+            margin-top: 8rem;
+            left: 50.3%;
+            font-size: 6.8px;
+            line-height: 10px;
+        }
+
+        .CeoEdu {
+            margin-top: 9rem;
+            left: 50.5%;
+            font-size: 6px;
+            line-height: 8px;
+        }
+
+        .CeoEdunl {
+            margin-top: 10rem;
+            left: 50.5%;
+            font-size: 6px;
+            line-height: 8px;
+        }
+
+        .CeoHr {
+            margin-top: 11.3rem;
+            left: 50.5%;
+            width: 18%;
+        }
+
+        .CeoSign {
+            margin-top: 12rem;
+            left: 50.5%;
+            width: 10%;
+        }
+
+        .marquee p {
+            font-size: 12px;
+        }
+    }
+    /*Media Query for Width 375px */
+    @media only screen and (max-width: 320px) {
+        .CeoImg {
+            width: 85%;
+        }
+
+        .CeoName {
+            margin-top: 4rem;
+            left: 50%;
+            font-size: 26px;
+            line-height: 26px;
+        }
+
+        .CeoFullName {
+            margin-top: 7.2rem;
+            left: 50.5%;
+            font-size: 3px;
+            line-height: 4px;
+        }
+
+        .CeoOf {
+            margin-top: 8rem;
+            left: 50.3%;
+            font-size: 5.8px;
+            line-height: 6px;
+        }
+
+        .CeoEdu {
+            margin-top: 9rem;
+            left: 50.5%;
+            font-size: 4px;
+            line-height: 6px;
+        }
+
+        .CeoEdunl {
+            margin-top: 10rem;
+            left: 50.5%;
+            font-size: 4px;
+            line-height: 6px;
+        }
+
+        .CeoHr {
+            margin-top: 11rem;
+            left: 50.5%;
+            width: 18%;
+        }
+
+        .CeoSign {
+            margin-top: 12rem;
+            left: 50.5%;
+            width: 10%;
+        }
+
+        .marquee {
+            animation: marquee 15s linear infinite;
+        }
+
+            .marquee p {
+                font-size: 10px;
+            }
+    }
+
+    @media (min-width: 1400px) and (max-width: 1440px) {
+        .CeoImg {
+            width: 75%;
+        }
+    }
+
+
+
+
+

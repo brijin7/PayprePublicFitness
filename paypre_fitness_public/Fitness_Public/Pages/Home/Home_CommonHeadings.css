@@ -1,0 +1,57 @@
+﻿:root {
+    --ClassesMainHeadingClr: #000;
+    --ClassesSubHeadingClr: #3E3D3D;
+    --SubscriptionMainHeading: #fff;
+    --SubscriptionSubHeading: #fff;
+}
+
+/*Classes Page Heading*/
+.Heading-Container {
+    text-transform: capitalize;
+    text-align-last: center;
+}
+
+    .Heading-Container
+    .MainHeading {
+        font-family: 'Manrope',sans-serif;
+        font-weight: 900;
+        font-size: 5rem;
+        color: #060606;
+    }
+
+    .Heading-Container.HdgClasses
+    .MainHeading {
+        color: var(--ClassesMainHeadingClr);
+    }
+
+    .Heading-Container.HdgClasses
+    .SubHeading {
+        /*color: var(--ClassesSubHeadingClr);*/
+        font-weight: 500;
+        color: #3E3D3D;
+    }
+
+    .Heading-Container.HdgSubscription
+    .MainHeading {
+        color: var(--ClassesMainHeadingClr);
+    }
+
+    .Heading-Container.HdgSubscription
+    .SubHeading {
+        color: var(--ClassesSubHeadingClr);
+    }
+
+
+    .Heading-Container.HdgJustAbout
+    .MainHeading {
+        color: var(--ClassesMainHeadingClr);
+    }
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+

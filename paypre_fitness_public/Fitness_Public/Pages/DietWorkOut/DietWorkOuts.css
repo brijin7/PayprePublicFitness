@@ -1,0 +1,1878 @@
+﻿.lnkWorkout {
+    color: black;
+    text-decoration: none;
+}
+.divresponsive {
+    overflow-y: auto;
+    overflow-x:hidden;
+    max-height: 525px;
+    margin-bottom: 2em;
+}
+
+/*Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #757575;
+    border-radius: 10px;
+}
+.PlanContainer {
+    height: 100vh;
+    width: 98vw;
+    border-radius: 0px;
+}
+
+.Wing {
+    position: absolute;
+    left: 46%;
+    top: 65%;
+    height: 2rem;
+    transform: translate(-24%,55%);
+}
+
+.Vector {
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    height: 1.5rem;
+    transform: translate(-1%,123%);
+}
+
+.DietWorkname {
+    position: absolute;
+    left: 9%;
+    top: 30%;
+    transform: translate(1%, 8%);
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5REM;
+}
+
+.Weeks {
+    position: absolute;
+    left: 9%;
+    top: 66%;
+    transform: translate(1%, 135%);
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5REM;
+}
+
+.divcontainer {
+    width: 26rem;
+    height: 4rem;
+    background: #EBEBEB;
+    border-radius: 5.53936px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #060606;
+    border: none;
+    position: relative;
+    top: 50%;
+}
+
+.divcontaineractive {
+    width: 26rem;
+    height: 4rem;
+    border-radius: 5.53936px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #060606;
+    border: none;
+    position: relative;
+    top: 50%;
+    background: #D8D8D8;
+}
+
+
+.showContent {
+    position: relative;
+    top: 7rem;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%,7%);
+    background: #E8ECF1;
+    border-radius: 20px;
+    height:auto;
+}
+
+.divTarget {
+    padding: 3rem;
+  
+}
+
+.target {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.targetDiet {
+    background: #D9D9D9;
+    border-radius: 3.61605px;
+    width: 8rem;
+    height: 2rem;
+    font-size: 13px;
+    padding-left: 1rem;
+    margin-top: -1rem;
+}
+
+.DietName {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #000000;
+    display: flex;
+}
+
+.DietCalo {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-top: 1.2rem;
+
+}
+
+.Clock {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.DietTime {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-top: 1.5rem;
+}
+
+.divDietTime {
+    text-align: right;
+}
+
+
+.divConsumed {
+    background: #FFFFFF;
+    border-radius: 16.2722px;
+    padding: 2rem;
+    padding-top: 1rem;
+   
+}
+
+.consumedItems {
+    background: #F9F9F9;
+    border-radius: 12.0064px;
+    height: inherit;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.consumedDietName {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #555555;
+    display: flex;
+}
+
+.consumedItemsEner {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #000000;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.itemsImg {
+    width: 100%;
+    border-radius: 17.1762px;
+    height: 13rem;
+}
+
+.Targetitems {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000000;
+    padding-bottom: 1rem;
+}
+
+.TargetitemsSub {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #242424;
+}
+
+.itemsName {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000000;
+    padding: 1rem;
+}
+
+.itemsSub {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #242424;
+}
+
+.divItems {
+    padding-top: 2rem;
+}
+
+.divtargetItems {
+    margin: 1rem;
+    padding: 0px;
+    background: #F9F9F9;
+    border-radius: 12.0064px;
+    margin-top: 3rem;
+    position: relative;
+    height: auto;
+    width: 18rem;
+}
+
+.divtargetItemsSelection {
+    margin: 1rem;
+    padding: 0px;
+    background: #F9F9F9;
+    border-radius: 12.0064px;
+    border: 2.71204px solid #199CE6;
+    margin-top: 3rem;
+    height: auto;
+    width: 18rem;
+}
+
+.divtargetItems::selection {
+    border-radius: 12.0064px;
+    border: 2.71204px solid #199CE6;
+}
+
+.targetItemsImg {
+    width: 18rem;
+    border-radius: 17.1762px;
+    object-fit: cover;
+    height: 13rem;
+}
+
+.targetImgSelection {
+    width: 100%;
+    border-radius: 17.1762px;
+    object-fit: cover;
+    max-height: max(10rem, 30vh);
+    aspect-ratio: 4/3;
+    mix-blend-mode: var(--card-blend-mode);
+}
+
+.targetItemsName {
+    padding: 1rem;
+}
+
+.TargetClick {
+    z-index: 1;
+    width: 30px;
+    height: 20px;
+    top: -193px;
+    left: 2px;
+    position: relative;
+}
+
+.ConsumedClick {
+    z-index: 1;
+    width: 30px;
+    height: 17px;
+    top: -131px;
+    left: 267px;
+    position: relative;
+}
+
+.finishButton {
+    border: 0.722206px solid #000000;
+    border-radius: 20.3844px;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    width: 17rem;
+}
+
+.containers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectedImageDiet {
+    position: absolute;
+    top: 1.8rem;
+    left: 1rem;
+    height: 2rem;
+}
+
+.ConsumedselectedImageDiet {
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    height: 2rem;
+}
+
+.DietTargetContainer {
+    display: flex;
+}
+
+.dietworkout {
+    display: flex;
+    justify-content: space-evenly;
+}
+.dt {
+    
+}
+@media only screen and (min-width: 100px) and (max-width:400px) {
+    .divConsumed {
+        background: #FFFFFF;
+        border-radius: 16.2722px;
+        padding: 2rem;
+        padding-top: 1rem;
+        width: 100%;
+    }
+
+    .divcontainer {
+        width: 23rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 13.5393px;
+        position: relative;
+        top: 100%;
+        transform: translateY(82%);
+    }
+
+    .divcontaineractive {
+        width: 23rem;
+        height: 4rem;
+        background: #D8D8D8;
+        border-radius: 13.5393px;
+        position: relative;
+        top: 100%;
+        transform: translateY(82%);
+    }
+
+    .Vector {
+        position: absolute;
+        left: 0%;
+        top: 65%;
+        height: 1.5rem;
+        transform: translate(-1%,60%);
+    }
+
+
+
+    .DietWorkname {
+        position: absolute;
+        left: 12%;
+        top: 30%;
+        transform: translate(1%, 8%);
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.5REM;
+    }
+
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        height: auto;
+        width: 18rem;
+    }
+
+    .divtargetItemsSelection {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        border: 2.71204px solid #199CE6;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 18rem;
+    }
+
+    .itemsName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #000000;
+        margin-top: -2rem;
+    }
+
+    .itemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.7rem;
+        color: #242424;
+    }
+
+    .divDietTime {
+        /* text-align: right; */
+        display: block;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: -39rem;
+        margin-inline-end: -14px;
+    }
+
+    .Wing {
+        position: absolute;
+        left: 59%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-36%,55%);
+    }
+
+
+    .consumedItems {
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        height: inherit;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        height: 1.5rem;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.5rem;
+        height: 2.5rem;
+    }
+
+    .TargetitemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #242424;
+    }
+
+    .Targetitems {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #000000;
+        padding: 1rem;
+    }
+
+    .DietCalo {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #000000;
+        margin-top: 2rem;
+    }
+
+    .DietTime {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #000000;
+        margin-top: 2rem;
+    }
+    .divItems {
+        padding-top: 1rem;
+    }
+    .itemsImg {
+        width: 100%;
+        border-radius: 17.1762px;
+        height: 11rem;
+    }
+    .dt {
+        margin-left: 18%;
+    }
+}
+
+@media only screen and (min-width: 410px) and (max-width:424px) {
+    .divConsumed {
+        background: #FFFFFF;
+        border-radius: 16.2722px;
+        padding: 2rem;
+        padding-top: 1rem;
+        width: 100%;
+    }
+
+    .divcontainer {
+        width: 23rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 13.5393px;
+        position: relative;
+        top: 100%;
+        transform: translateY(82%);
+    }
+
+    .divcontaineractive {
+        width: 23rem;
+        height: 4rem;
+        background: #D8D8D8;
+        border-radius: 13.5393px;
+        position: relative;
+        top: 100%;
+        transform: translateY(82%);
+    }
+
+    .Vector {
+        position: absolute;
+        left: 0%;
+        top: 65%;
+        height: 1.5rem;
+        transform: translate(-1%,60%);
+    }
+
+
+
+    .DietWorkname {
+        position: absolute;
+        left: 12%;
+        top: 30%;
+        transform: translate(1%, 8%);
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.5REM;
+    }
+
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        height: 23rem;
+        width: 18rem;
+    }
+
+    .divtargetItemsSelection {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        border: 2.71204px solid #199CE6;
+        margin-top: 3rem;
+        position: relative;
+        height: 23rem;
+        width: 18rem;
+    }
+
+    .itemsName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: #000000;
+        margin-top: -1rem;
+    }
+
+    .itemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #242424;
+    }
+
+    .divDietTime {
+        /* text-align: right; */
+        display: block;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: -42rem;
+        margin-inline-end: -14px;
+    }
+
+    .Wing {
+        position: absolute;
+        left: 67%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-36%,55%);
+    }
+
+
+    .consumedItems {
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        height: inherit;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        height: 1.5rem;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.5rem;
+        height: 2.5rem;
+    }
+
+    .TargetitemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #242424;
+    }
+
+    .Targetitems {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        color: #000000;
+        padding: 1rem;
+    }
+
+    .DietCalo {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #000000;
+        margin-top: 2rem;
+    }
+
+    .DietTime {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #000000;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (min-width:425px) and (max-width:466px) {
+    .divConsumed {
+        background: #FFFFFF;
+        border-radius: 16.2722px;
+        padding: 2rem;
+        padding-top: 1rem;
+        width: 100%;
+    }
+
+   
+    .divcontaineractive {
+        width: 17rem;
+        height: 4rem;
+        background: #D8D8D8;
+        border-radius: 5.53936px;
+        position: relative;
+        top: 100%;
+        transform: translateY(82%);
+    }
+
+    .divcontainer {
+        width: 17rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 5.53936px;
+        position: relative;
+        top: 100%;
+        transform: translateY(82%);
+    }
+
+
+
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        height: auto;
+        width: 25rem;
+    }
+
+    .divtargetItemsSelection {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        border: 2.71204px solid #199CE6;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 25rem;
+    }
+
+    .itemsName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: #000000;
+        margin-top: 1rem;
+    }
+
+    .itemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #242424;
+    }
+
+    .targetItemsName {
+        padding: 3rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .divDietTime {
+        /* text-align: right; */
+        display: block;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: -13rem;
+        margin-inline-end: -14px;
+    }
+
+
+
+    .divDietTime {
+        /* text-align: right; */
+        display: block;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: -53rem;
+        margin-inline-end: -14px;
+    }
+
+    .consumedItems {
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        height: inherit;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        height: 2rem;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.5rem;
+        height: 2.5rem;
+    }
+
+    .Targetitems {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.2rem;
+        color: #000000;
+        padding-bottom: 1rem;
+    }
+
+    .TargetitemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #242424;
+    }
+    .targetItemsImg {
+        width: 25rem;
+        border-radius: 17.1762px;
+        object-fit: cover;
+        height: 13rem;
+    }
+    .dt {
+        margin-left: 18%;
+    }
+    .divItems {
+        padding-top: 1rem;
+    }
+}
+
+@media only screen and (min-width:375px) and (max-width:375px) {
+    .divConsumed {
+        background: #FFFFFF;
+        border-radius: 16.2722px;
+        padding: 2rem;
+        padding-top: 1rem;
+        width: 100%;
+    }
+
+   
+    .divDietTime {
+        /* text-align: right; */
+        display: block;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: -40rem;
+        margin-inline-end: -14px;
+    }
+
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        height: auto;
+        width: 22rem;
+    }
+
+    .divtargetItemsSelection {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        border: 2.71204px solid #199CE6;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 18rem;
+    }
+
+    .itemsName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: #000000;
+        margin-top: 1rem;
+    }
+
+    .itemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        color: #242424;
+        font-size: 1rem;
+    }
+
+    .consumedItems {
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        height: inherit;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        height: 1.5rem;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.5rem;
+        height: 2.5rem;
+    }
+
+    .divcontainer {
+        width: 17rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 5.53936px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #060606;
+        border: none;
+        position: relative;
+        top: 100%;
+        transform: translateY(82%);
+    }
+
+    .divcontaineractive {
+        width: 17rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 5.53936px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #060606;
+        border: none;
+        position: relative;
+        top: 100%;
+        transform: translateY(82%);
+    }
+
+    .targetItemsName {
+        padding: 2.3rem;
+    }
+
+    .Targetitems {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        color: #000000;
+        padding-bottom: 1rem;
+    }
+
+    .TargetitemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #242424;
+    }
+
+    .Wing {
+        position: absolute;
+        left: 54%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-24%,55%);
+    }
+    .targetItemsImg {
+        width: 22rem;
+        border-radius: 17.1762px;
+        object-fit: cover;
+        height: 13rem;
+    }
+    .divItems {
+        padding-top: 0rem;
+    }
+}
+
+@media only screen and (min-width:460px) and (max-width:475px) {
+
+    .divDietTime {
+        /* text-align: right; */
+        display: block;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: -64rem;
+        margin-inline-end: -14px;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width:575px) {
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        height: auto;
+        width: 23rem;
+    }
+
+    .divtargetItemsSelection {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        border: 2.71204px solid #199CE6;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 23rem;
+    }
+
+    .targetItemsImg {
+        width: 23rem;
+        border-radius: 17.1762px;
+        object-fit: cover;
+        height: 13rem;
+    }
+    .divcontainer {
+        width: 17rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 5.53936px;
+        margin-inline-start: -11.5rem;
+        position: relative;
+        top: 130%;
+    }
+
+    .divcontaineractive {
+        width: 17rem;
+        height: 4rem;
+        background: #D8D8D8;
+        border-radius: 5.53936px;
+        margin-inline-start: -11.5rem;
+        position: relative;
+        top: 130%;
+    }
+
+    .itemsName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #000000;
+        margin-top: 3rem;
+    }
+
+    .itemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #242424;
+    }
+
+    .DietName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.1rem;
+        color: #000000;
+        display: flex;
+    }
+
+    .DietCalo {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #000000;
+        margin-top: 1rem;
+        margin-left: 9px;
+    }
+
+    .DietTime {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #000000;
+        margin-top: 1rem;
+    }
+
+    .target {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .targetDiet {
+        background: #D9D9D9;
+        border-radius: 3.61605px;
+        width: 6rem;
+        height: 2rem;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+        margin-top: -1rem;
+    }
+
+    .divItems {
+        padding-top: 3rem;
+    }
+
+    .finishButton {
+        border: 0.722206px solid #000000;
+        border-radius: 20.3844px;
+        box-sizing: border-box;
+        background-color: #000000;
+        color: white;
+        padding: 8px;
+        font-size: 1.4rem;
+        width: 10rem;
+    }
+
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        height: 1.5rem;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.5rem;
+        height: 1.5rem;
+    }
+
+
+    .TargetitemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #242424;
+    }
+
+    .DietTime {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #000000;
+    }
+    .dt {
+        margin-left: 18%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width:673px) {
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        height: auto;
+        width: 23rem;
+    }
+
+    .divtargetItemsSelection {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        border: 2.71204px solid #199CE6;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 23rem;
+    }
+
+    .targetItemsImg {
+        width: 23rem;
+        border-radius: 17.1762px;
+        object-fit: cover;
+        height: 13rem;
+    }
+    .divcontaineractive {
+        width: 17rem;
+        height: 4rem;
+        background: #D8D8D8;
+        border-radius: 5.53936px;
+        margin-inline-start: 0.5rem;
+        position: relative;
+        top: 28%;
+    }
+
+    .divcontainer {
+        width: 17rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 5.53936px;
+        margin-inline-start: 0.5rem;
+        position: relative;
+        top: 28%;
+    }
+
+    .itemsName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #000000;
+        margin-top: 3rem;
+    }
+
+    .itemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #242424;
+    }
+
+    .DietName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.1rem;
+        color: #000000;
+        display: flex;
+    }
+
+    .DietCalo {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #000000;
+        margin-top: 1rem;
+        margin-left: 9px;
+    }
+
+    .DietTime {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #000000;
+        margin-top: 1rem;
+    }
+
+    .target {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .targetDiet {
+        background: #D9D9D9;
+        border-radius: 3.61605px;
+        width: 6rem;
+        height: 2rem;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+        margin-top: -1rem;
+    }
+
+    .divItems {
+        padding-top: 3rem;
+    }
+
+    .finishButton {
+        border: 0.722206px solid #000000;
+        border-radius: 20.3844px;
+        box-sizing: border-box;
+        background-color: #000000;
+        color: white;
+        padding: 8px;
+        font-size: 1.4rem;
+        width: 10rem;
+    }
+
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        height: 1.5rem;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.5rem;
+        height: 1.5rem;
+    }
+
+
+    .TargetitemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #242424;
+    }
+
+    .DietTime {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #000000;
+        margin-top: 1rem;
+    }
+
+    .Wing {
+        position: absolute;
+        left: 73%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-24%,55%);
+    }
+
+    .divConsumed {
+        background: #FFFFFF;
+        border-radius: 16.2722px;
+        padding: 2rem;
+        padding-top: 1rem;
+        /* width: 100%;*/
+    }
+
+    .itemsImg {
+        width: 100%;
+        border-radius: 17.1762px;
+        height: 15rem;
+    }
+}
+
+@media only screen and (min-width: 674px) and (max-width:767px) {
+    .divcontainer {
+        width: 17rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 5.53936px;
+        margin-inline-start: 1.5rem;
+        position: relative;
+        top: 28%;
+    }
+
+    .divcontaineractive {
+        width: 17rem;
+        height: 4rem;
+        background: #D8D8D8;
+        border-radius: 5.53936px;
+        margin-inline-start: 1.5rem;
+        position: relative;
+        top: 28%;
+    }
+
+    .Wing {
+        position: absolute;
+        left: 74%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-24%,55%);
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width:900px) {
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        height: auto;
+        width: 18rem;
+    }
+
+    .divtargetItemsSelection {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        border: 2.71204px solid #199CE6;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 18rem;
+    }
+
+
+    .divcontainer {
+        width: 17rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 5.53936px;
+        margin-inline-start: 1.5rem;
+        position: relative;
+        top: 50%;
+    }
+
+    .divcontaineractive {
+        width: 17rem;
+        height: 4rem;
+        background: #D8D8D8;
+        border-radius: 5.53936px;
+        margin-inline-start: 1.5rem;
+        position: relative;
+        top: 50%;
+    }
+
+    .itemsName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: #000000;
+        margin-top: 1rem;
+    }
+
+    .itemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: #242424;
+    }
+
+    .DietName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.1rem;
+        color: #000000;
+        display: flex;
+    }
+
+    .DietCalo {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #000000;
+        margin-top: 1rem;
+        margin-left: 9px;
+    }
+
+    .DietTime {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #000000;
+        margin-top: 1rem;
+    }
+
+    .target {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .targetDiet {
+        background: #D9D9D9;
+        border-radius: 3.61605px;
+        width: 6rem;
+        height: 2rem;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+        margin-top: -1rem;
+    }
+
+    .divItems {
+        padding-top: 1rem;
+    }
+
+    .finishButton {
+        border: 0.722206px solid #000000;
+        border-radius: 20.3844px;
+        box-sizing: border-box;
+        background-color: #000000;
+        color: white;
+        padding: 8px;
+        font-size: 1.4rem;
+        width: 10rem;
+    }
+
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        height: 1.5rem;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.5rem;
+        height: 1.5rem;
+    }
+
+    .Wing {
+        position: absolute;
+        left: 56%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-24%,55%);
+    }
+    .itemsImg {
+        width: 100%;
+        border-radius: 17.1762px;
+        height: 12rem;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width:1023px) {
+    .divcontainer {
+        width: 23rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 13.5393px;
+        position: relative;
+        top: 50%;
+    }
+
+    .divcontaineractive {
+        width: 23rem;
+        height: 4rem;
+        background: #D8D8D8;
+        border-radius: 13.5393px;
+        position: relative;
+        top: 50%;
+    }
+
+    .itemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: #242424;
+        /* width: auto; */
+    }
+
+    .itemsName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #000000;
+        /* padding: 0.5rem; */
+        padding-top: 1rem;
+    }
+
+    .finishButton {
+        border: 0.722206px solid #000000;
+        border-radius: 20.3844px;
+        box-sizing: border-box;
+        background-color: #000000;
+        color: white;
+        padding: 8px;
+        width: 17rem;
+    }
+
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        height: 1.5rem;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 1.8rem;
+        left: 1rem;
+        height: 1.5rem;
+    }
+
+    .DietCalo {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #000000;
+        margin-top: 1.5rem;
+        margin-left: -2px;
+    }
+
+    .Wing {
+        position: absolute;
+        left: 59%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-24%,55%);
+    }
+
+    .Vector {
+        position: absolute;
+        left: -3%;
+        top: 20%;
+        height: 1.5rem;
+        transform: translate(-24%,139%);
+    }
+
+    .DietWorkname {
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        transform: translate(1%, 8%);
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.5REM;
+    }
+
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        height: auto;
+        width: 18rem;
+    }
+
+    .divtargetItemsSelection {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        border: 2.71204px solid #199CE6;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 18rem;
+    }
+
+    .TargetitemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: #242424;
+    }
+
+    .Targetitems {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #000000;
+        padding-bottom: 1rem;
+    }
+
+    .targetItemsName {
+        padding: 1rem;
+    }
+
+    .divItems {
+        padding-top: 3rem;
+    }
+
+    .DietName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.3rem;
+        color: #000000;
+        display: flex;
+    }
+
+    .DietTime {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #000000;
+        margin-top: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1224px) {
+    .divcontainer {
+        width: 23rem;
+        height: 4rem;
+        background: #EBEBEB;
+        border-radius: 13.5393px;
+        position: relative;
+        top: 50%;
+    }
+
+    .divcontaineractive {
+        width: 23rem;
+        height: 4rem;
+        background: #D8D8D8;
+        border-radius: 13.5393px;
+        position: relative;
+        top: 50%;
+    }
+
+    .itemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #242424;
+        /* width: auto; */
+    }
+
+    .itemsName {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #000000;
+        padding: 0.5rem;
+    }
+
+    .finishButton {
+        border: 0.722206px solid #000000;
+        border-radius: 20.3844px;
+        box-sizing: border-box;
+        background-color: #000000;
+        color: white;
+        padding: 8px;
+        width: 17rem;
+    }
+
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 1.8rem;
+        right: 1rem;
+        height: 1.5rem;
+    }
+
+    .selectedImageDiet {
+        position: absolute;
+        top: 1.8rem;
+        left: 1rem;
+        height: 1.5rem;
+    }
+
+    .DietCalo {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #000000;
+        margin-top: 2rem;
+        margin-left: 20px;
+    }
+
+    .Wing {
+        position: absolute;
+        left: 45%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-24%,55%);
+    }
+
+
+    .DietWorkname {
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        transform: translate(1%, 8%);
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.5REM;
+    }
+
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        height: auto;
+        width: 18rem;
+    }
+
+    .divtargetItemsSelection {
+        margin: 1rem;
+        padding: 0px;
+        background: #F9F9F9;
+        border-radius: 12.0064px;
+        border: 2.71204px solid #199CE6;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 18rem;
+    }
+
+    .TargetitemsSub {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #242424;
+    }
+
+    .Targetitems {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: #000000;
+        padding-bottom: 1rem;
+    }
+
+    .targetItemsName {
+        padding: 1rem;
+    }
+    .Weeks {
+        position: absolute;
+        left: 9%;
+        top: 66%;
+        transform: translate(-12%, 135%);
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5REM;
+    }
+}
+
+@media only screen and (min-width:1440px) and (max-width:1440px) {
+    .Wing {
+        position: absolute;
+        left: 41%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-24%,55%);
+    }
+    .ConsumedselectedImageDiet {
+        position: absolute;
+        top: 0.8rem;
+        right: 1rem;
+        height: 2rem;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:320px) {
+    .divDietTime {
+        /* text-align: right; */
+        display: block;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: -30rem;
+        margin-inline-end: -14px;
+    }
+
+    .Wing {
+        position: absolute;
+        left: 67%;
+        top: 65%;
+        height: 2rem;
+        transform: translate(-36%,55%);
+    }
+}

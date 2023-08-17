@@ -1,0 +1,452 @@
+﻿.containerBg {
+    background: #f1f1f1;
+}
+
+.mealContainer {
+    padding: 3rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding-bottom: 0;
+    background: white;
+    padding-top: 1rem;
+}
+
+.divMealPlan {
+    text-align: center;
+}
+
+.lblMealHead {
+    font-size: 2rem;
+    color: black;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.DaysdivMain {
+    position: relative;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.divDays {
+    width: 5.8rem;
+}
+
+.lblDays {
+    font-size: 1.5rem;
+    font-family: 'Manrope';
+    font-weight: 600;
+    color: #c5c5c5;
+}
+
+.lblDaysActive {
+    color: #5e5e5e;
+}
+
+.lblDaysSelect {
+    color: #0072ff;
+}
+
+.DivSelectDate {
+    border-bottom: 2px solid #0072ff;
+}
+
+.lblMyMeals {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Manrope';
+    color: black;
+    margin: 1rem;
+}
+
+.DivMealHead {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.divMymeals {
+    padding: 5rem;
+    padding-top: 1rem;
+}
+
+.divMealTypes {
+    text-align: center;
+    background: white;
+    border-radius: 1rem;
+    margin: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Foodimg {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.lblMealHeadtype {
+    box-shadow: 0 4px 20px rgba(0,66,129,.12);
+    margin-top: -2rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+}
+
+.lblMealSubHead {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #001fff;
+    background: linear-gradient(91.64deg,#5145ff 6.61%,#003cff 96.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: auto;
+}
+
+.lblMealDtl {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
+
+
+.divWorkOutHead {
+    text-align: center;
+    padding: 1rem;
+    background-color: white;
+}
+
+.lblWorkOutHead {
+    font-size: 2rem;
+    font-family: 'Manrope';
+    font-weight: 700;
+    color: black;
+}
+
+.divWorkOut {
+    margin: 5rem;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.imgworkout {
+    margin-top: 1rem;
+    width: 34rem;
+    border-radius: 1.5rem;
+}
+
+.workoutlist {
+    margin: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 5px 12px rgba(0,66,129,.12);
+    position: relative;
+    width: 37rem;
+    margin-left: 1.3rem;
+}
+
+.divWorkOutDtl {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.lblWortOutDtl {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    font-family: 'Manrope';
+}
+
+.lblWorkOutName {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.BookingPopup {
+    position: fixed;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 50;
+    background-color: #0000008f;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BookingPayMentPopup {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    z-index: 1;
+    padding-bottom: 4rem;
+    width: 80%;
+    height: 90%;
+    overflow-y: auto;
+}
+
+.divBookingHead {
+    padding: 2rem;
+    color: white;
+    background: linear-gradient(91.64deg,#265781 6.61%,#29758f 96.58%);
+}
+
+.lblBookingHead {
+    font-size: 2rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.divPlan {
+    background-color: white;
+    border-radius: 2rem;
+    margin-top: -1rem;
+}
+
+.divPlanDescription {
+    padding: 5rem;
+    padding-left: 10rem;
+    text-align: justify;
+    font-size: 1.3rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.divPlanDescriptionHead {
+    margin-top: 3rem;
+}
+
+.lblPlanDescriptionHead {
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.divPlanCat {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 2rem;
+}
+
+.divPlanCatSelect {
+    border: 2px solid;
+    border-color: #4944ff;
+}
+
+.divPlanList {
+    padding: 5rem;
+    padding-left: 10rem;
+    text-align: justify;
+    overflow: auto;
+    height: 400px;
+}
+
+.lblPlanName {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #001fff;
+    background: linear-gradient(91.64deg,#5145ff 6.61%,#003cff 96.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: auto;
+}
+.lblTrainigTypeName {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: blueviolet;
+}
+.lblPlanDuration {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: black;
+}
+
+.lbldtlActAmt {
+    font-size: 2rem;
+    font-family: 'Manrope';
+    position: relative;
+    font-weight: 400;
+}
+
+    .lbldtlActAmt::before {
+        content: '';
+        position: absolute;
+        margin-top: 13px;
+        width: 100%;
+        border-bottom: 2px solid red;
+        transform: rotate(-15deg);
+    }
+
+.lblDisplayAmt {
+    font-size: 2.5rem;
+    font-family: 'Manrope';
+    font-weight: 600;
+}
+
+.lblPlanSelect {
+    background: #00000026;
+    display: inherit;
+    color: #ffffff00;
+    width: 2.5rem;
+    border-radius: 3rem;
+    text-align: center;
+    margin-left: 1rem;
+}
+.lblPlanSelected {
+    color: #ffffff;
+    background: linear-gradient(90deg,#1000ff 6.61%,#003cff 96.58%);
+}
+/*dropdown*/
+select {
+    background-color: #fff !important;
+    color: #000000 !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    font-family: 'Manrope';
+}
+
+.btnBuy {
+    color: #ffffff;
+    background: linear-gradient(90deg,#1000ff 6.61%,#003cff 96.58%);
+    border: none;
+    font-size: 1.8rem;
+    width: 13rem;
+    height: 4rem;
+    font-family: 'Manrope';
+    border-radius: 2rem;
+    font-weight: 600;
+    position: fixed;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+}
+
+
+.ddlSlot {
+    overflow: auto;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.ddlSlotBtn {
+    position: relative;
+    display: flex;
+    gap: 0.3rem;
+    text-align: center;
+    border: 1px solid #b3b3b3;
+    padding: 1rem;
+    border-radius: 2rem;
+    color: black;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 6.5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    justify-content: center;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+    .ddlSlotBtn:hover {
+        position: relative;
+        display: flex;
+        gap: 0.3rem;
+        text-align: center;
+        border: 1px solid #b3b3b3;
+        padding: 1rem;
+        border-radius: 2rem;
+        color: white;
+        background: #286387;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        width: 6.5rem;
+        font-size: 1rem;
+        font-weight: 800;
+        justify-content: center;
+        margin-left: 0.5rem;
+        text-decoration: none;
+    }
+
+.ddlSlotBtnSelect {
+    position: relative;
+    display: flex;
+    gap: 0.3rem;
+    text-align: center;
+    border: 1px solid #b3b3b3;
+    padding: 1rem;
+    border-radius: 2rem;
+    color: white;
+    background: #286387;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 6.5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    justify-content: center;
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+
+    .ddlSlotBtnSelect:hover {
+        position: relative;
+        display: flex;
+        gap: 0.3rem;
+        text-align: center;
+        border: 1px solid #b3b3b3;
+        padding: 1rem;
+        border-radius: 2rem;
+        color: white;
+        background: #286387;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        width: 6.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        justify-content: center;
+        margin-left: 0.5rem;
+        text-decoration: none;
+    }
+
+.lblSlotDes {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.divTrainerDd {
+    margin: 1.5rem;
+}
+
+.lblSummaryTop {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+}
+.divSummary {
+    margin: 4rem;
+    margin-top: 0rem;
+}
+
+.lblSummaryHead {
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+}
+
+.lblSummary {
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+}

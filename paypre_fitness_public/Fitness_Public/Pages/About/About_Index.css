@@ -1,0 +1,179 @@
+﻿.divabtFit
+{
+    padding:10rem;
+}
+
+.AboutVid {
+    border-radius: 1.5rem;
+    width:100%;
+}
+.divabtDtls {
+    padding: 10rem;
+}
+.lblAbtDtlsHead {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.divabtcnt {
+    margin-top: 4rem;
+}
+.abttextcnt{
+    font-size:1.5rem;
+}
+
+@media (min-width: 319px) and (max-width: 320px){
+    .divabtFit {
+        padding:0;
+        padding-left: 1rem;
+    }
+    .AboutVid {
+        border-radius: 1.5rem;
+        width: 38rem;
+    }
+    .divabtDtls {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px){
+    .divabtFit {
+        padding: 0;
+        padding-left: 1rem;
+    }
+
+    .AboutVid {
+        border-radius: 1.5rem;
+        width: 45rem;
+    }
+
+    .divabtDtls {
+        padding: 3rem;
+    }
+}
+@media (min-width: 376px) and (max-width: 425px){
+    .divabtFit {
+        padding: 0;
+        padding-left: 1rem;
+    }
+
+    .AboutVid {
+        border-radius: 1.5rem;
+        width: 51rem;
+    }
+
+    .divabtDtls {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 600px){
+    .divabtFit {
+        padding: 0;
+        padding-left: 1rem;
+    }
+
+    .AboutVid {
+        border-radius: 1.5rem;
+        width: 58rem;
+    }
+
+    .divabtDtls {
+        padding: 3rem;
+    }
+}
+
+
+
+/*Equipments & Group Classes*/
+
+.divEquipmnet {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.EquipHead {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.divEquip{
+    margin-top:5rem;
+}
+
+@media (min-width: 319px) and (max-width: 320px){
+    .divEquipmnet {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .divEquipmnet {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .divEquipmnet {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 600px) {
+    .divEquipmnet {
+        padding: 3rem;
+    }
+}
+
+/*Our Special Trainers*/
+.trainerimg{
+    width:15rem;
+}
+
+/*final Head*/
+.finalHead {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 4.2rem;
+    color: #000000;
+}
+@media (min-width: 319px) and (max-width: 320px){
+    .finalHead {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: 0.9rem;
+        color: #000000;
+    }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+    .finalHead {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: 1.1rem;
+        color: #000000;
+    }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+    .finalHead {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: 1.3rem;
+        color: #000000;
+    }
+}
+@media (min-width: 426px) and (max-width: 600px) {
+    .finalHead {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: 1.7rem;
+        color: #000000;
+    }
+}

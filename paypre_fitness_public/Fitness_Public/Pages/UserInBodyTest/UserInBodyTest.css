@@ -1,0 +1,343 @@
+﻿/*Required Field*/
+.rfvStyle {
+    font-size: 1.2rem;
+    color: red;
+    float: right;
+}
+
+.reqiredstar {
+    font-weight: 900;
+    color: red;
+}
+/*Required Field End*/
+
+
+/*TextBox*/
+.txtboxdiv {
+    position: relative;
+}
+
+.txtlabel {
+    position: absolute;
+    font-size: 1.3rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f8f9fa;
+    color: #000000;
+    font-weight: 500;
+    padding: 0 0.3rem;
+    margin: 0 0.5rem;
+    transition: 0.1s ease-out;
+    transform-origin: left top;
+    pointer-events: none;
+}
+
+.txtbox {
+    font-size: 1.3rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid #8d8d8d;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    color: black;
+    font-weight: 500;
+    transition: 0.1s ease-out;
+    background-color: #f8f9fa;
+}
+
+    .txtbox:focus {
+        border-color: #000000;
+    }
+
+        .txtbox:focus + .txtlabel {
+            color: #000;
+            top: 0;
+            transform: translateY(-50%) scale(0.9);
+            font-weight: 500;
+        }
+
+    .txtbox:not(:placeholder-shown) + .txtlabel {
+        top: 0;
+        transform: translateY(-50%) scale(0.9);
+    }
+/*TextBox End*/
+/*Dropdown*/
+select {
+    background-color: #fff !important;
+    color: #5f6368 !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    border: 1px solid #8d8d8d !important;
+}
+
+option[value]::file-selector-button {
+    background-color: red;
+}
+/*Dropdown End*/
+/*CheckBoxList*/
+
+input[type="checkbox"] {
+    margin-right: 0.4rem;
+    margin-left: 0.1rem;
+}
+
+.frmcheckbox {
+    color: #5f6368;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/*CheckBoxList End*/
+/*RadioButtonList*/
+input[type="radio"] {
+    margin-right: 0.3rem;
+    margin-left: 0.6rem;
+}
+/*RadioButtonList End*/
+
+
+.DivMyProfile {
+    position: relative;
+    background-color: #f8f9fa;
+    margin-top: 5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding: 5rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+}
+
+.lblHead {
+    font-size: 2.5rem;
+    font-family: 'Manrope';
+    font-weight: 700;
+}
+
+.lblGender {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: 'Manrope';
+}
+
+.profile {
+    color: #202124;
+    font-size: 1rem;
+}
+
+
+.imgpreview {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.2rem;
+    border-radius: 4rem;
+    margin-left: 1rem;
+}
+
+
+.btnSubmit {
+    border-radius: 2rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    height: 4rem;
+    border: 0;
+    background-color: #000000;
+    color: white;
+}
+
+
+.btnCancel {
+    border-radius: 2rem;
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border: 1px solid;
+    background-color: #ffffff;
+    color: black;
+}
+.form-select {
+    display: block;
+    width: 100%;
+    padding: .375rem 2.25rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #757575;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #8d8d8d !important;
+    border-radius: 5px;
+    appearance: none
+}
+
+    .form-select:focus {
+        border-color: #80ceff;
+        outline: 0;
+        box-shadow: 0 0 0 .25rem rgba(0,156,255,0.25)
+    }
+
+    .form-select[multiple], .form-select[size]:not([size="1"]) {
+        padding-right: .75rem;
+        background-image: none
+    }
+
+    .form-select:disabled {
+        background-color: #e9ecef
+    }
+
+    .form-select:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #757575
+    }
+
+.form-select-sm {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    padding-left: .5rem;
+    font-size: .875rem
+}
+
+.form-select-lg {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    font-size: 1.25rem
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+select {
+    color: #040404 !important;
+    font-size: 1.3rem !important;
+}
+.btnAdd {
+    height: 50px;
+    width: 50px;
+}
+
+.AddPlus {
+    font-size: 14px;
+    font-weight: 700 !important;
+    color:black;
+    text-decoration:none;
+}
+.showContent {
+    position: relative;
+    top: 7rem;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%,5%);
+    background: #E8ECF1;
+    border-radius: 20px;
+    height: auto;
+    padding: 1rem;
+}
+.divtargetItems1 {
+    margin: 1rem;
+    padding: 0px;
+    background: #ffffff;
+    border-radius: 12.0064px;
+    position: relative;
+    height: auto;
+    padding: 1rem;
+}
+.divtargetItems2 {
+    margin: 1rem;
+    padding: 0px;
+    background: #ffffff;
+    border-radius: 12.0064px;
+    position: relative;
+    height: auto;
+      width: 70%;
+    padding: 1rem;
+}
+.divtargetItems3 {
+    margin: 1rem;
+    padding: 0px;
+    background: #ffffff;
+    border-radius: 12.0064px;
+    position: relative;
+    height: auto;
+      width: 96%;
+    padding: 1rem;
+}
+.divlbl {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.divlabel {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.ImageStyle {
+    margin-left: -2px;
+    height: 13rem;
+}
+.divWeightRange {
+    background-color: #e8ecf1;
+    margin: 1rem;
+    border-radius: 11.9306px;
+}
+.divdate {
+   padding:0.5rem;
+}
+.divAdd {
+    text-align: end;
+}
+.divTitle {
+    float: left;
+}
+.divresponsive {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 525px;
+
+}
+
+/*Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #757575;
+    border-radius: 10px;
+}
+@media only screen and (min-width:320px) and (max-width:425px) {
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #ffffff;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 95%;
+        padding: 1rem;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:768px) {
+    .divtargetItems {
+        margin: 1rem;
+        padding: 0px;
+        background: #ffffff;
+        border-radius: 12.0064px;
+        margin-top: 3rem;
+        position: relative;
+        height: auto;
+        width: 80%;
+        padding: 1rem;
+    }
+}
+.date {
+    width: 17px;
+    height: 15px;
+}
